@@ -1,13 +1,13 @@
 <BMS>
     <BMCU>
         <BootloaderVersion>7</BootloaderVersion>
-        <CellOverVoltage>4300</CellOverVoltage>
+        <CellOverVoltage>4200</CellOverVoltage>
         <OvershootWindow>20</OvershootWindow>
-        <CellTargetVoltage>4250</CellTargetVoltage>
+        <CellTargetVoltage>4150</CellTargetVoltage>
         <CellChgOffWindow>20</CellChgOffWindow>
         <ChargeCompleteWindowSize>10</ChargeCompleteWindowSize>
-        <ChargeStartRegulationVoltage>4190</ChargeStartRegulationVoltage>
-        <CellMinimumVoltage>2900</CellMinimumVoltage>
+        <ChargeStartRegulationVoltage>4090</ChargeStartRegulationVoltage>
+        <CellMinimumVoltage>3300</CellMinimumVoltage>
         <MaintenanceChgOffVoltage>0</MaintenanceChgOffVoltage>
         <MaintenanceChgOnVoltage>0</MaintenanceChgOnVoltage>
         <MaximumChargeTemperature>55</MaximumChargeTemperature>
@@ -15,8 +15,8 @@
         <MinimumChargeTemperature>-10</MinimumChargeTemperature>
         <MaximumDischargeTemperature>60</MaximumDischargeTemperature>
         <MinimumDischargeTemperature>-30</MinimumDischargeTemperature>
-        <BatteryInitialTotalAh>64</BatteryInitialTotalAh>
-        <BatteryCalculatedTotalAh>64</BatteryCalculatedTotalAh>
+        <BatteryInitialTotalAh>54</BatteryInitialTotalAh>
+        <BatteryCalculatedTotalAh>54</BatteryCalculatedTotalAh>
         <NumberOfLMUs>11</NumberOfLMUs>
         <NumberOfParallellStrings>1</NumberOfParallellStrings>
         <ChargeCompleteWhenBalanced>False</ChargeCompleteWhenBalanced>
@@ -53,22 +53,22 @@
         <DischargeModeVoltageDiffThreshold>15</DischargeModeVoltageDiffThreshold>
         <ChargeModeVoltageDiffThreshold>4</ChargeModeVoltageDiffThreshold>
         <VoltageScalingFactor>100</VoltageScalingFactor>
-        <CellEndOfLifeVoltage>2000</CellEndOfLifeVoltage>
+        <CellEndOfLifeVoltage>2500</CellEndOfLifeVoltage>
         <MaxLMUtemperature>85</MaxLMUtemperature>
         <MinLMUtemperature>-40</MinLMUtemperature>
         <MaxBMCUsupplyVoltage>165</MaxBMCUsupplyVoltage>
         <MinBMCUsupplyVoltage>75</MinBMCUsupplyVoltage>
-        <IsoOffsetChargeMode>5</IsoOffsetChargeMode>
-        <IsoOffsetDischargeMode>15</IsoOffsetDischargeMode>
+        <IsoOffsetChargeMode>40</IsoOffsetChargeMode>
+        <IsoOffsetDischargeMode>40</IsoOffsetDischargeMode>
         <IsoSettlingTime>80</IsoSettlingTime>
         <ChargeMaximumCurrent>10</ChargeMaximumCurrent>
-        <TrickleChargeCurrent>10</TrickleChargeCurrent>
+        <TrickleChargeCurrent>30</TrickleChargeCurrent>
         <ChargerMinimumCurrent>30</ChargerMinimumCurrent>
         <ChargeMaximumCurrentLowPower>60</ChargeMaximumCurrentLowPower>
         <ChargerEfficiency>0</ChargerEfficiency>
-        <ChargerRegulationType>Exp</ChargerRegulationType>
+        <ChargerRegulationType>Lin</ChargerRegulationType>
         <ChargerRegulationLoopTimer>1</ChargerRegulationLoopTimer>
-        <CANChargerVoltage>360</CANChargerVoltage>
+        <CANChargerVoltage>340</CANChargerVoltage>
         <CANChargerBrandSelect>None</CANChargerBrandSelect>
         <CANNoOfChargers>1</CANNoOfChargers>
         <ErrorFromCharge>ON</ErrorFromCharge>
@@ -340,7 +340,7 @@
         <CANTX_Frame_1_Signal_2_Bitoffset>0</CANTX_Frame_1_Signal_2_Bitoffset>
         <CANTX_Frame_1_Signal_3_StartBit>152</CANTX_Frame_1_Signal_3_StartBit>
         <CANTX_Frame_1_Signal_3_Bits>8</CANTX_Frame_1_Signal_3_Bits>
-        <CANTX_Frame_1_Signal_3_Address>18459</CANTX_Frame_1_Signal_3_Address>
+        <CANTX_Frame_1_Signal_3_Address>18388</CANTX_Frame_1_Signal_3_Address>
         <CANTX_Frame_1_Signal_3_Bitoffset>0</CANTX_Frame_1_Signal_3_Bitoffset>
         <CANTX_Frame_1_Signal_4_StartBit>160</CANTX_Frame_1_Signal_4_StartBit>
         <CANTX_Frame_1_Signal_4_Bits>16</CANTX_Frame_1_Signal_4_Bits>
@@ -352,7 +352,7 @@
         <CANTX_Frame_1_Signal_5_Bitoffset>0</CANTX_Frame_1_Signal_5_Bitoffset>
         <CANTX_Frame_1_Signal_6_StartBit>128</CANTX_Frame_1_Signal_6_StartBit>
         <CANTX_Frame_1_Signal_6_Bits>8</CANTX_Frame_1_Signal_6_Bits>
-        <CANTX_Frame_1_Signal_6_Address>18461</CANTX_Frame_1_Signal_6_Address>
+        <CANTX_Frame_1_Signal_6_Address>18389</CANTX_Frame_1_Signal_6_Address>
         <CANTX_Frame_1_Signal_6_Bitoffset>0</CANTX_Frame_1_Signal_6_Bitoffset>
         <CANTX_Frame_1_Signal_7_StartBit>127</CANTX_Frame_1_Signal_7_StartBit>
         <CANTX_Frame_1_Signal_7_Bits>255</CANTX_Frame_1_Signal_7_Bits>
@@ -559,28 +559,28 @@
         <CANTX_Frame_3_Interval>1</CANTX_Frame_3_Interval>
         <CANTX_Frame_3_DLC>8</CANTX_Frame_3_DLC>
         <CANTX_Frame_3_Signal_1_StartBit>128</CANTX_Frame_3_Signal_1_StartBit>
-        <CANTX_Frame_3_Signal_1_Bits>16</CANTX_Frame_3_Signal_1_Bits>
-        <CANTX_Frame_3_Signal_1_Address>4300</CANTX_Frame_3_Signal_1_Address>
+        <CANTX_Frame_3_Signal_1_Bits>8</CANTX_Frame_3_Signal_1_Bits>
+        <CANTX_Frame_3_Signal_1_Address>2006</CANTX_Frame_3_Signal_1_Address>
         <CANTX_Frame_3_Signal_1_Bitoffset>0</CANTX_Frame_3_Signal_1_Bitoffset>
-        <CANTX_Frame_3_Signal_2_StartBit>144</CANTX_Frame_3_Signal_2_StartBit>
-        <CANTX_Frame_3_Signal_2_Bits>136</CANTX_Frame_3_Signal_2_Bits>
-        <CANTX_Frame_3_Signal_2_Address>81</CANTX_Frame_3_Signal_2_Address>
+        <CANTX_Frame_3_Signal_2_StartBit>136</CANTX_Frame_3_Signal_2_StartBit>
+        <CANTX_Frame_3_Signal_2_Bits>8</CANTX_Frame_3_Signal_2_Bits>
+        <CANTX_Frame_3_Signal_2_Address>2012</CANTX_Frame_3_Signal_2_Address>
         <CANTX_Frame_3_Signal_2_Bitoffset>0</CANTX_Frame_3_Signal_2_Bitoffset>
-        <CANTX_Frame_3_Signal_3_StartBit>152</CANTX_Frame_3_Signal_3_StartBit>
+        <CANTX_Frame_3_Signal_3_StartBit>144</CANTX_Frame_3_Signal_3_StartBit>
         <CANTX_Frame_3_Signal_3_Bits>8</CANTX_Frame_3_Signal_3_Bits>
-        <CANTX_Frame_3_Signal_3_Address>3</CANTX_Frame_3_Signal_3_Address>
+        <CANTX_Frame_3_Signal_3_Address>0</CANTX_Frame_3_Signal_3_Address>
         <CANTX_Frame_3_Signal_3_Bitoffset>0</CANTX_Frame_3_Signal_3_Bitoffset>
-        <CANTX_Frame_3_Signal_4_StartBit>160</CANTX_Frame_3_Signal_4_StartBit>
-        <CANTX_Frame_3_Signal_4_Bits>16</CANTX_Frame_3_Signal_4_Bits>
-        <CANTX_Frame_3_Signal_4_Address>18414</CANTX_Frame_3_Signal_4_Address>
+        <CANTX_Frame_3_Signal_4_StartBit>152</CANTX_Frame_3_Signal_4_StartBit>
+        <CANTX_Frame_3_Signal_4_Bits>8</CANTX_Frame_3_Signal_4_Bits>
+        <CANTX_Frame_3_Signal_4_Address>2016</CANTX_Frame_3_Signal_4_Address>
         <CANTX_Frame_3_Signal_4_Bitoffset>0</CANTX_Frame_3_Signal_4_Bitoffset>
-        <CANTX_Frame_3_Signal_5_StartBit>176</CANTX_Frame_3_Signal_5_StartBit>
+        <CANTX_Frame_3_Signal_5_StartBit>160</CANTX_Frame_3_Signal_5_StartBit>
         <CANTX_Frame_3_Signal_5_Bits>16</CANTX_Frame_3_Signal_5_Bits>
-        <CANTX_Frame_3_Signal_5_Address>18416</CANTX_Frame_3_Signal_5_Address>
+        <CANTX_Frame_3_Signal_5_Address>18414</CANTX_Frame_3_Signal_5_Address>
         <CANTX_Frame_3_Signal_5_Bitoffset>0</CANTX_Frame_3_Signal_5_Bitoffset>
-        <CANTX_Frame_3_Signal_6_StartBit>48</CANTX_Frame_3_Signal_6_StartBit>
-        <CANTX_Frame_3_Signal_6_Bits>8</CANTX_Frame_3_Signal_6_Bits>
-        <CANTX_Frame_3_Signal_6_Address>0</CANTX_Frame_3_Signal_6_Address>
+        <CANTX_Frame_3_Signal_6_StartBit>176</CANTX_Frame_3_Signal_6_StartBit>
+        <CANTX_Frame_3_Signal_6_Bits>16</CANTX_Frame_3_Signal_6_Bits>
+        <CANTX_Frame_3_Signal_6_Address>18416</CANTX_Frame_3_Signal_6_Address>
         <CANTX_Frame_3_Signal_6_Bitoffset>0</CANTX_Frame_3_Signal_6_Bitoffset>
         <CANTX_Frame_3_Signal_7_StartBit>127</CANTX_Frame_3_Signal_7_StartBit>
         <CANTX_Frame_3_Signal_7_Bits>255</CANTX_Frame_3_Signal_7_Bits>
@@ -988,7 +988,7 @@
         <CANTX_Frame_7_Signal_3_Bitoffset>0</CANTX_Frame_7_Signal_3_Bitoffset>
         <CANTX_Frame_7_Signal_4_StartBit>184</CANTX_Frame_7_Signal_4_StartBit>
         <CANTX_Frame_7_Signal_4_Bits>8</CANTX_Frame_7_Signal_4_Bits>
-        <CANTX_Frame_7_Signal_4_Address>18461</CANTX_Frame_7_Signal_4_Address>
+        <CANTX_Frame_7_Signal_4_Address>18389</CANTX_Frame_7_Signal_4_Address>
         <CANTX_Frame_7_Signal_4_Bitoffset>0</CANTX_Frame_7_Signal_4_Bitoffset>
         <CANTX_Frame_7_Signal_5_StartBit>127</CANTX_Frame_7_Signal_5_StartBit>
         <CANTX_Frame_7_Signal_5_Bits>255</CANTX_Frame_7_Signal_5_Bits>
@@ -1282,42 +1282,42 @@
         <CANTX_Frame_9_Signal_25_Bits>0</CANTX_Frame_9_Signal_25_Bits>
         <CANTX_Frame_9_Signal_25_Address>0</CANTX_Frame_9_Signal_25_Address>
         <CANTX_Frame_9_Signal_25_Bitoffset>0</CANTX_Frame_9_Signal_25_Bitoffset>
-        <CANTX_Frame_10_Description>Thermal + bounded clamp</CANTX_Frame_10_Description>
-        <CANTX_Frame_10_ID>2147485280</CANTX_Frame_10_ID>
-        <CANTX_Frame_10_Interval>19</CANTX_Frame_10_Interval>
-        <CANTX_Frame_10_DLC>8</CANTX_Frame_10_DLC>
-        <CANTX_Frame_10_Signal_1_StartBit>128</CANTX_Frame_10_Signal_1_StartBit>
-        <CANTX_Frame_10_Signal_1_Bits>8</CANTX_Frame_10_Signal_1_Bits>
-        <CANTX_Frame_10_Signal_1_Address>18410</CANTX_Frame_10_Signal_1_Address>
-        <CANTX_Frame_10_Signal_1_Bitoffset>0</CANTX_Frame_10_Signal_1_Bitoffset>
-        <CANTX_Frame_10_Signal_2_StartBit>136</CANTX_Frame_10_Signal_2_StartBit>
-        <CANTX_Frame_10_Signal_2_Bits>8</CANTX_Frame_10_Signal_2_Bits>
-        <CANTX_Frame_10_Signal_2_Address>18411</CANTX_Frame_10_Signal_2_Address>
-        <CANTX_Frame_10_Signal_2_Bitoffset>0</CANTX_Frame_10_Signal_2_Bitoffset>
-        <CANTX_Frame_10_Signal_3_StartBit>144</CANTX_Frame_10_Signal_3_StartBit>
-        <CANTX_Frame_10_Signal_3_Bits>8</CANTX_Frame_10_Signal_3_Bits>
-        <CANTX_Frame_10_Signal_3_Address>18507</CANTX_Frame_10_Signal_3_Address>
-        <CANTX_Frame_10_Signal_3_Bitoffset>0</CANTX_Frame_10_Signal_3_Bitoffset>
-        <CANTX_Frame_10_Signal_4_StartBit>152</CANTX_Frame_10_Signal_4_StartBit>
-        <CANTX_Frame_10_Signal_4_Bits>8</CANTX_Frame_10_Signal_4_Bits>
-        <CANTX_Frame_10_Signal_4_Address>18388</CANTX_Frame_10_Signal_4_Address>
-        <CANTX_Frame_10_Signal_4_Bitoffset>0</CANTX_Frame_10_Signal_4_Bitoffset>
-        <CANTX_Frame_10_Signal_5_StartBit>160</CANTX_Frame_10_Signal_5_StartBit>
-        <CANTX_Frame_10_Signal_5_Bits>8</CANTX_Frame_10_Signal_5_Bits>
-        <CANTX_Frame_10_Signal_5_Address>18389</CANTX_Frame_10_Signal_5_Address>
-        <CANTX_Frame_10_Signal_5_Bitoffset>0</CANTX_Frame_10_Signal_5_Bitoffset>
-        <CANTX_Frame_10_Signal_6_StartBit>168</CANTX_Frame_10_Signal_6_StartBit>
-        <CANTX_Frame_10_Signal_6_Bits>8</CANTX_Frame_10_Signal_6_Bits>
-        <CANTX_Frame_10_Signal_6_Address>18487</CANTX_Frame_10_Signal_6_Address>
-        <CANTX_Frame_10_Signal_6_Bitoffset>0</CANTX_Frame_10_Signal_6_Bitoffset>
-        <CANTX_Frame_10_Signal_7_StartBit>176</CANTX_Frame_10_Signal_7_StartBit>
-        <CANTX_Frame_10_Signal_7_Bits>8</CANTX_Frame_10_Signal_7_Bits>
-        <CANTX_Frame_10_Signal_7_Address>18471</CANTX_Frame_10_Signal_7_Address>
-        <CANTX_Frame_10_Signal_7_Bitoffset>0</CANTX_Frame_10_Signal_7_Bitoffset>
-        <CANTX_Frame_10_Signal_8_StartBit>184</CANTX_Frame_10_Signal_8_StartBit>
-        <CANTX_Frame_10_Signal_8_Bits>8</CANTX_Frame_10_Signal_8_Bits>
-        <CANTX_Frame_10_Signal_8_Address>18459</CANTX_Frame_10_Signal_8_Address>
-        <CANTX_Frame_10_Signal_8_Bitoffset>0</CANTX_Frame_10_Signal_8_Bitoffset>
+        <CANTX_Frame_10_Description>Description Here</CANTX_Frame_10_Description>
+        <CANTX_Frame_10_ID>0</CANTX_Frame_10_ID>
+        <CANTX_Frame_10_Interval>0</CANTX_Frame_10_Interval>
+        <CANTX_Frame_10_DLC>0</CANTX_Frame_10_DLC>
+        <CANTX_Frame_10_Signal_1_StartBit>255</CANTX_Frame_10_Signal_1_StartBit>
+        <CANTX_Frame_10_Signal_1_Bits>255</CANTX_Frame_10_Signal_1_Bits>
+        <CANTX_Frame_10_Signal_1_Address>65535</CANTX_Frame_10_Signal_1_Address>
+        <CANTX_Frame_10_Signal_1_Bitoffset>255</CANTX_Frame_10_Signal_1_Bitoffset>
+        <CANTX_Frame_10_Signal_2_StartBit>255</CANTX_Frame_10_Signal_2_StartBit>
+        <CANTX_Frame_10_Signal_2_Bits>255</CANTX_Frame_10_Signal_2_Bits>
+        <CANTX_Frame_10_Signal_2_Address>65535</CANTX_Frame_10_Signal_2_Address>
+        <CANTX_Frame_10_Signal_2_Bitoffset>255</CANTX_Frame_10_Signal_2_Bitoffset>
+        <CANTX_Frame_10_Signal_3_StartBit>255</CANTX_Frame_10_Signal_3_StartBit>
+        <CANTX_Frame_10_Signal_3_Bits>255</CANTX_Frame_10_Signal_3_Bits>
+        <CANTX_Frame_10_Signal_3_Address>65535</CANTX_Frame_10_Signal_3_Address>
+        <CANTX_Frame_10_Signal_3_Bitoffset>255</CANTX_Frame_10_Signal_3_Bitoffset>
+        <CANTX_Frame_10_Signal_4_StartBit>255</CANTX_Frame_10_Signal_4_StartBit>
+        <CANTX_Frame_10_Signal_4_Bits>255</CANTX_Frame_10_Signal_4_Bits>
+        <CANTX_Frame_10_Signal_4_Address>65535</CANTX_Frame_10_Signal_4_Address>
+        <CANTX_Frame_10_Signal_4_Bitoffset>255</CANTX_Frame_10_Signal_4_Bitoffset>
+        <CANTX_Frame_10_Signal_5_StartBit>255</CANTX_Frame_10_Signal_5_StartBit>
+        <CANTX_Frame_10_Signal_5_Bits>255</CANTX_Frame_10_Signal_5_Bits>
+        <CANTX_Frame_10_Signal_5_Address>65535</CANTX_Frame_10_Signal_5_Address>
+        <CANTX_Frame_10_Signal_5_Bitoffset>255</CANTX_Frame_10_Signal_5_Bitoffset>
+        <CANTX_Frame_10_Signal_6_StartBit>255</CANTX_Frame_10_Signal_6_StartBit>
+        <CANTX_Frame_10_Signal_6_Bits>255</CANTX_Frame_10_Signal_6_Bits>
+        <CANTX_Frame_10_Signal_6_Address>65535</CANTX_Frame_10_Signal_6_Address>
+        <CANTX_Frame_10_Signal_6_Bitoffset>255</CANTX_Frame_10_Signal_6_Bitoffset>
+        <CANTX_Frame_10_Signal_7_StartBit>255</CANTX_Frame_10_Signal_7_StartBit>
+        <CANTX_Frame_10_Signal_7_Bits>255</CANTX_Frame_10_Signal_7_Bits>
+        <CANTX_Frame_10_Signal_7_Address>65535</CANTX_Frame_10_Signal_7_Address>
+        <CANTX_Frame_10_Signal_7_Bitoffset>255</CANTX_Frame_10_Signal_7_Bitoffset>
+        <CANTX_Frame_10_Signal_8_StartBit>255</CANTX_Frame_10_Signal_8_StartBit>
+        <CANTX_Frame_10_Signal_8_Bits>255</CANTX_Frame_10_Signal_8_Bits>
+        <CANTX_Frame_10_Signal_8_Address>65535</CANTX_Frame_10_Signal_8_Address>
+        <CANTX_Frame_10_Signal_8_Bitoffset>255</CANTX_Frame_10_Signal_8_Bitoffset>
         <CANTX_Frame_10_Signal_9_StartBit>255</CANTX_Frame_10_Signal_9_StartBit>
         <CANTX_Frame_10_Signal_9_Bits>255</CANTX_Frame_10_Signal_9_Bits>
         <CANTX_Frame_10_Signal_9_Address>65535</CANTX_Frame_10_Signal_9_Address>
@@ -1386,18 +1386,18 @@
         <CANTX_Frame_10_Signal_25_Bits>255</CANTX_Frame_10_Signal_25_Bits>
         <CANTX_Frame_10_Signal_25_Address>65535</CANTX_Frame_10_Signal_25_Address>
         <CANTX_Frame_10_Signal_25_Bitoffset>255</CANTX_Frame_10_Signal_25_Bitoffset>
-        <CANTX_Frame_11_Description>Energy and uptime</CANTX_Frame_11_Description>
-        <CANTX_Frame_11_ID>2147485281</CANTX_Frame_11_ID>
-        <CANTX_Frame_11_Interval>19</CANTX_Frame_11_Interval>
-        <CANTX_Frame_11_DLC>6</CANTX_Frame_11_DLC>
-        <CANTX_Frame_11_Signal_1_StartBit>128</CANTX_Frame_11_Signal_1_StartBit>
-        <CANTX_Frame_11_Signal_1_Bits>24</CANTX_Frame_11_Signal_1_Bits>
-        <CANTX_Frame_11_Signal_1_Address>18534</CANTX_Frame_11_Signal_1_Address>
-        <CANTX_Frame_11_Signal_1_Bitoffset>0</CANTX_Frame_11_Signal_1_Bitoffset>
-        <CANTX_Frame_11_Signal_2_StartBit>152</CANTX_Frame_11_Signal_2_StartBit>
-        <CANTX_Frame_11_Signal_2_Bits>24</CANTX_Frame_11_Signal_2_Bits>
-        <CANTX_Frame_11_Signal_2_Address>18424</CANTX_Frame_11_Signal_2_Address>
-        <CANTX_Frame_11_Signal_2_Bitoffset>0</CANTX_Frame_11_Signal_2_Bitoffset>
+        <CANTX_Frame_11_Description>Description Here</CANTX_Frame_11_Description>
+        <CANTX_Frame_11_ID>0</CANTX_Frame_11_ID>
+        <CANTX_Frame_11_Interval>0</CANTX_Frame_11_Interval>
+        <CANTX_Frame_11_DLC>0</CANTX_Frame_11_DLC>
+        <CANTX_Frame_11_Signal_1_StartBit>255</CANTX_Frame_11_Signal_1_StartBit>
+        <CANTX_Frame_11_Signal_1_Bits>255</CANTX_Frame_11_Signal_1_Bits>
+        <CANTX_Frame_11_Signal_1_Address>65535</CANTX_Frame_11_Signal_1_Address>
+        <CANTX_Frame_11_Signal_1_Bitoffset>255</CANTX_Frame_11_Signal_1_Bitoffset>
+        <CANTX_Frame_11_Signal_2_StartBit>255</CANTX_Frame_11_Signal_2_StartBit>
+        <CANTX_Frame_11_Signal_2_Bits>255</CANTX_Frame_11_Signal_2_Bits>
+        <CANTX_Frame_11_Signal_2_Address>65535</CANTX_Frame_11_Signal_2_Address>
+        <CANTX_Frame_11_Signal_2_Bitoffset>255</CANTX_Frame_11_Signal_2_Bitoffset>
         <CANTX_Frame_11_Signal_3_StartBit>255</CANTX_Frame_11_Signal_3_StartBit>
         <CANTX_Frame_11_Signal_3_Bits>255</CANTX_Frame_11_Signal_3_Bits>
         <CANTX_Frame_11_Signal_3_Address>65535</CANTX_Frame_11_Signal_3_Address>
@@ -1490,26 +1490,26 @@
         <CANTX_Frame_11_Signal_25_Bits>255</CANTX_Frame_11_Signal_25_Bits>
         <CANTX_Frame_11_Signal_25_Address>65535</CANTX_Frame_11_Signal_25_Address>
         <CANTX_Frame_11_Signal_25_Bitoffset>255</CANTX_Frame_11_Signal_25_Bitoffset>
-        <CANTX_Frame_12_Description>LMU cells 1-3</CANTX_Frame_12_Description>
-        <CANTX_Frame_12_ID>2147485282</CANTX_Frame_12_ID>
+        <CANTX_Frame_12_Description>Description Here</CANTX_Frame_12_Description>
+        <CANTX_Frame_12_ID>0</CANTX_Frame_12_ID>
         <CANTX_Frame_12_Interval>0</CANTX_Frame_12_Interval>
-        <CANTX_Frame_12_DLC>8</CANTX_Frame_12_DLC>
-        <CANTX_Frame_12_Signal_1_StartBit>128</CANTX_Frame_12_Signal_1_StartBit>
-        <CANTX_Frame_12_Signal_1_Bits>8</CANTX_Frame_12_Signal_1_Bits>
-        <CANTX_Frame_12_Signal_1_Address>18513</CANTX_Frame_12_Signal_1_Address>
-        <CANTX_Frame_12_Signal_1_Bitoffset>0</CANTX_Frame_12_Signal_1_Bitoffset>
-        <CANTX_Frame_12_Signal_2_StartBit>136</CANTX_Frame_12_Signal_2_StartBit>
-        <CANTX_Frame_12_Signal_2_Bits>16</CANTX_Frame_12_Signal_2_Bits>
-        <CANTX_Frame_12_Signal_2_Address>18514</CANTX_Frame_12_Signal_2_Address>
-        <CANTX_Frame_12_Signal_2_Bitoffset>0</CANTX_Frame_12_Signal_2_Bitoffset>
-        <CANTX_Frame_12_Signal_3_StartBit>152</CANTX_Frame_12_Signal_3_StartBit>
-        <CANTX_Frame_12_Signal_3_Bits>16</CANTX_Frame_12_Signal_3_Bits>
-        <CANTX_Frame_12_Signal_3_Address>18516</CANTX_Frame_12_Signal_3_Address>
-        <CANTX_Frame_12_Signal_3_Bitoffset>0</CANTX_Frame_12_Signal_3_Bitoffset>
-        <CANTX_Frame_12_Signal_4_StartBit>168</CANTX_Frame_12_Signal_4_StartBit>
-        <CANTX_Frame_12_Signal_4_Bits>16</CANTX_Frame_12_Signal_4_Bits>
-        <CANTX_Frame_12_Signal_4_Address>18518</CANTX_Frame_12_Signal_4_Address>
-        <CANTX_Frame_12_Signal_4_Bitoffset>0</CANTX_Frame_12_Signal_4_Bitoffset>
+        <CANTX_Frame_12_DLC>0</CANTX_Frame_12_DLC>
+        <CANTX_Frame_12_Signal_1_StartBit>255</CANTX_Frame_12_Signal_1_StartBit>
+        <CANTX_Frame_12_Signal_1_Bits>255</CANTX_Frame_12_Signal_1_Bits>
+        <CANTX_Frame_12_Signal_1_Address>65535</CANTX_Frame_12_Signal_1_Address>
+        <CANTX_Frame_12_Signal_1_Bitoffset>255</CANTX_Frame_12_Signal_1_Bitoffset>
+        <CANTX_Frame_12_Signal_2_StartBit>255</CANTX_Frame_12_Signal_2_StartBit>
+        <CANTX_Frame_12_Signal_2_Bits>255</CANTX_Frame_12_Signal_2_Bits>
+        <CANTX_Frame_12_Signal_2_Address>65535</CANTX_Frame_12_Signal_2_Address>
+        <CANTX_Frame_12_Signal_2_Bitoffset>255</CANTX_Frame_12_Signal_2_Bitoffset>
+        <CANTX_Frame_12_Signal_3_StartBit>255</CANTX_Frame_12_Signal_3_StartBit>
+        <CANTX_Frame_12_Signal_3_Bits>255</CANTX_Frame_12_Signal_3_Bits>
+        <CANTX_Frame_12_Signal_3_Address>65535</CANTX_Frame_12_Signal_3_Address>
+        <CANTX_Frame_12_Signal_3_Bitoffset>255</CANTX_Frame_12_Signal_3_Bitoffset>
+        <CANTX_Frame_12_Signal_4_StartBit>255</CANTX_Frame_12_Signal_4_StartBit>
+        <CANTX_Frame_12_Signal_4_Bits>255</CANTX_Frame_12_Signal_4_Bits>
+        <CANTX_Frame_12_Signal_4_Address>65535</CANTX_Frame_12_Signal_4_Address>
+        <CANTX_Frame_12_Signal_4_Bitoffset>255</CANTX_Frame_12_Signal_4_Bitoffset>
         <CANTX_Frame_12_Signal_5_StartBit>255</CANTX_Frame_12_Signal_5_StartBit>
         <CANTX_Frame_12_Signal_5_Bits>255</CANTX_Frame_12_Signal_5_Bits>
         <CANTX_Frame_12_Signal_5_Address>65535</CANTX_Frame_12_Signal_5_Address>
@@ -1594,26 +1594,26 @@
         <CANTX_Frame_12_Signal_25_Bits>255</CANTX_Frame_12_Signal_25_Bits>
         <CANTX_Frame_12_Signal_25_Address>65535</CANTX_Frame_12_Signal_25_Address>
         <CANTX_Frame_12_Signal_25_Bitoffset>255</CANTX_Frame_12_Signal_25_Bitoffset>
-        <CANTX_Frame_13_Description>LMU cells 4-6</CANTX_Frame_13_Description>
-        <CANTX_Frame_13_ID>2147485283</CANTX_Frame_13_ID>
-        <CANTX_Frame_13_Interval>2</CANTX_Frame_13_Interval>
-        <CANTX_Frame_13_DLC>8</CANTX_Frame_13_DLC>
-        <CANTX_Frame_13_Signal_1_StartBit>128</CANTX_Frame_13_Signal_1_StartBit>
-        <CANTX_Frame_13_Signal_1_Bits>8</CANTX_Frame_13_Signal_1_Bits>
-        <CANTX_Frame_13_Signal_1_Address>18513</CANTX_Frame_13_Signal_1_Address>
-        <CANTX_Frame_13_Signal_1_Bitoffset>0</CANTX_Frame_13_Signal_1_Bitoffset>
-        <CANTX_Frame_13_Signal_2_StartBit>136</CANTX_Frame_13_Signal_2_StartBit>
-        <CANTX_Frame_13_Signal_2_Bits>16</CANTX_Frame_13_Signal_2_Bits>
-        <CANTX_Frame_13_Signal_2_Address>18520</CANTX_Frame_13_Signal_2_Address>
-        <CANTX_Frame_13_Signal_2_Bitoffset>0</CANTX_Frame_13_Signal_2_Bitoffset>
-        <CANTX_Frame_13_Signal_3_StartBit>152</CANTX_Frame_13_Signal_3_StartBit>
-        <CANTX_Frame_13_Signal_3_Bits>16</CANTX_Frame_13_Signal_3_Bits>
-        <CANTX_Frame_13_Signal_3_Address>18522</CANTX_Frame_13_Signal_3_Address>
-        <CANTX_Frame_13_Signal_3_Bitoffset>0</CANTX_Frame_13_Signal_3_Bitoffset>
-        <CANTX_Frame_13_Signal_4_StartBit>168</CANTX_Frame_13_Signal_4_StartBit>
-        <CANTX_Frame_13_Signal_4_Bits>16</CANTX_Frame_13_Signal_4_Bits>
-        <CANTX_Frame_13_Signal_4_Address>18524</CANTX_Frame_13_Signal_4_Address>
-        <CANTX_Frame_13_Signal_4_Bitoffset>0</CANTX_Frame_13_Signal_4_Bitoffset>
+        <CANTX_Frame_13_Description>Description Here</CANTX_Frame_13_Description>
+        <CANTX_Frame_13_ID>0</CANTX_Frame_13_ID>
+        <CANTX_Frame_13_Interval>0</CANTX_Frame_13_Interval>
+        <CANTX_Frame_13_DLC>0</CANTX_Frame_13_DLC>
+        <CANTX_Frame_13_Signal_1_StartBit>255</CANTX_Frame_13_Signal_1_StartBit>
+        <CANTX_Frame_13_Signal_1_Bits>255</CANTX_Frame_13_Signal_1_Bits>
+        <CANTX_Frame_13_Signal_1_Address>65535</CANTX_Frame_13_Signal_1_Address>
+        <CANTX_Frame_13_Signal_1_Bitoffset>255</CANTX_Frame_13_Signal_1_Bitoffset>
+        <CANTX_Frame_13_Signal_2_StartBit>255</CANTX_Frame_13_Signal_2_StartBit>
+        <CANTX_Frame_13_Signal_2_Bits>255</CANTX_Frame_13_Signal_2_Bits>
+        <CANTX_Frame_13_Signal_2_Address>65535</CANTX_Frame_13_Signal_2_Address>
+        <CANTX_Frame_13_Signal_2_Bitoffset>255</CANTX_Frame_13_Signal_2_Bitoffset>
+        <CANTX_Frame_13_Signal_3_StartBit>255</CANTX_Frame_13_Signal_3_StartBit>
+        <CANTX_Frame_13_Signal_3_Bits>255</CANTX_Frame_13_Signal_3_Bits>
+        <CANTX_Frame_13_Signal_3_Address>65535</CANTX_Frame_13_Signal_3_Address>
+        <CANTX_Frame_13_Signal_3_Bitoffset>255</CANTX_Frame_13_Signal_3_Bitoffset>
+        <CANTX_Frame_13_Signal_4_StartBit>255</CANTX_Frame_13_Signal_4_StartBit>
+        <CANTX_Frame_13_Signal_4_Bits>255</CANTX_Frame_13_Signal_4_Bits>
+        <CANTX_Frame_13_Signal_4_Address>65535</CANTX_Frame_13_Signal_4_Address>
+        <CANTX_Frame_13_Signal_4_Bitoffset>255</CANTX_Frame_13_Signal_4_Bitoffset>
         <CANTX_Frame_13_Signal_5_StartBit>255</CANTX_Frame_13_Signal_5_StartBit>
         <CANTX_Frame_13_Signal_5_Bits>255</CANTX_Frame_13_Signal_5_Bits>
         <CANTX_Frame_13_Signal_5_Address>65535</CANTX_Frame_13_Signal_5_Address>
@@ -1698,34 +1698,34 @@
         <CANTX_Frame_13_Signal_25_Bits>255</CANTX_Frame_13_Signal_25_Bits>
         <CANTX_Frame_13_Signal_25_Address>65535</CANTX_Frame_13_Signal_25_Address>
         <CANTX_Frame_13_Signal_25_Bitoffset>255</CANTX_Frame_13_Signal_25_Bitoffset>
-        <CANTX_Frame_14_Description>LMU cells 7-8 + temps</CANTX_Frame_14_Description>
-        <CANTX_Frame_14_ID>2147485284</CANTX_Frame_14_ID>
-        <CANTX_Frame_14_Interval>4</CANTX_Frame_14_Interval>
-        <CANTX_Frame_14_DLC>8</CANTX_Frame_14_DLC>
-        <CANTX_Frame_14_Signal_1_StartBit>128</CANTX_Frame_14_Signal_1_StartBit>
-        <CANTX_Frame_14_Signal_1_Bits>8</CANTX_Frame_14_Signal_1_Bits>
-        <CANTX_Frame_14_Signal_1_Address>18513</CANTX_Frame_14_Signal_1_Address>
-        <CANTX_Frame_14_Signal_1_Bitoffset>0</CANTX_Frame_14_Signal_1_Bitoffset>
-        <CANTX_Frame_14_Signal_2_StartBit>136</CANTX_Frame_14_Signal_2_StartBit>
-        <CANTX_Frame_14_Signal_2_Bits>16</CANTX_Frame_14_Signal_2_Bits>
-        <CANTX_Frame_14_Signal_2_Address>18526</CANTX_Frame_14_Signal_2_Address>
-        <CANTX_Frame_14_Signal_2_Bitoffset>0</CANTX_Frame_14_Signal_2_Bitoffset>
-        <CANTX_Frame_14_Signal_3_StartBit>152</CANTX_Frame_14_Signal_3_StartBit>
-        <CANTX_Frame_14_Signal_3_Bits>16</CANTX_Frame_14_Signal_3_Bits>
-        <CANTX_Frame_14_Signal_3_Address>18528</CANTX_Frame_14_Signal_3_Address>
-        <CANTX_Frame_14_Signal_3_Bitoffset>0</CANTX_Frame_14_Signal_3_Bitoffset>
-        <CANTX_Frame_14_Signal_4_StartBit>168</CANTX_Frame_14_Signal_4_StartBit>
-        <CANTX_Frame_14_Signal_4_Bits>8</CANTX_Frame_14_Signal_4_Bits>
-        <CANTX_Frame_14_Signal_4_Address>18532</CANTX_Frame_14_Signal_4_Address>
-        <CANTX_Frame_14_Signal_4_Bitoffset>0</CANTX_Frame_14_Signal_4_Bitoffset>
-        <CANTX_Frame_14_Signal_5_StartBit>176</CANTX_Frame_14_Signal_5_StartBit>
-        <CANTX_Frame_14_Signal_5_Bits>8</CANTX_Frame_14_Signal_5_Bits>
-        <CANTX_Frame_14_Signal_5_Address>18530</CANTX_Frame_14_Signal_5_Address>
-        <CANTX_Frame_14_Signal_5_Bitoffset>0</CANTX_Frame_14_Signal_5_Bitoffset>
-        <CANTX_Frame_14_Signal_6_StartBit>184</CANTX_Frame_14_Signal_6_StartBit>
-        <CANTX_Frame_14_Signal_6_Bits>8</CANTX_Frame_14_Signal_6_Bits>
-        <CANTX_Frame_14_Signal_6_Address>18531</CANTX_Frame_14_Signal_6_Address>
-        <CANTX_Frame_14_Signal_6_Bitoffset>0</CANTX_Frame_14_Signal_6_Bitoffset>
+        <CANTX_Frame_14_Description>Description Here</CANTX_Frame_14_Description>
+        <CANTX_Frame_14_ID>0</CANTX_Frame_14_ID>
+        <CANTX_Frame_14_Interval>0</CANTX_Frame_14_Interval>
+        <CANTX_Frame_14_DLC>0</CANTX_Frame_14_DLC>
+        <CANTX_Frame_14_Signal_1_StartBit>255</CANTX_Frame_14_Signal_1_StartBit>
+        <CANTX_Frame_14_Signal_1_Bits>255</CANTX_Frame_14_Signal_1_Bits>
+        <CANTX_Frame_14_Signal_1_Address>65535</CANTX_Frame_14_Signal_1_Address>
+        <CANTX_Frame_14_Signal_1_Bitoffset>255</CANTX_Frame_14_Signal_1_Bitoffset>
+        <CANTX_Frame_14_Signal_2_StartBit>255</CANTX_Frame_14_Signal_2_StartBit>
+        <CANTX_Frame_14_Signal_2_Bits>255</CANTX_Frame_14_Signal_2_Bits>
+        <CANTX_Frame_14_Signal_2_Address>65535</CANTX_Frame_14_Signal_2_Address>
+        <CANTX_Frame_14_Signal_2_Bitoffset>255</CANTX_Frame_14_Signal_2_Bitoffset>
+        <CANTX_Frame_14_Signal_3_StartBit>255</CANTX_Frame_14_Signal_3_StartBit>
+        <CANTX_Frame_14_Signal_3_Bits>255</CANTX_Frame_14_Signal_3_Bits>
+        <CANTX_Frame_14_Signal_3_Address>65535</CANTX_Frame_14_Signal_3_Address>
+        <CANTX_Frame_14_Signal_3_Bitoffset>255</CANTX_Frame_14_Signal_3_Bitoffset>
+        <CANTX_Frame_14_Signal_4_StartBit>255</CANTX_Frame_14_Signal_4_StartBit>
+        <CANTX_Frame_14_Signal_4_Bits>255</CANTX_Frame_14_Signal_4_Bits>
+        <CANTX_Frame_14_Signal_4_Address>65535</CANTX_Frame_14_Signal_4_Address>
+        <CANTX_Frame_14_Signal_4_Bitoffset>255</CANTX_Frame_14_Signal_4_Bitoffset>
+        <CANTX_Frame_14_Signal_5_StartBit>255</CANTX_Frame_14_Signal_5_StartBit>
+        <CANTX_Frame_14_Signal_5_Bits>255</CANTX_Frame_14_Signal_5_Bits>
+        <CANTX_Frame_14_Signal_5_Address>65535</CANTX_Frame_14_Signal_5_Address>
+        <CANTX_Frame_14_Signal_5_Bitoffset>255</CANTX_Frame_14_Signal_5_Bitoffset>
+        <CANTX_Frame_14_Signal_6_StartBit>255</CANTX_Frame_14_Signal_6_StartBit>
+        <CANTX_Frame_14_Signal_6_Bits>255</CANTX_Frame_14_Signal_6_Bits>
+        <CANTX_Frame_14_Signal_6_Address>65535</CANTX_Frame_14_Signal_6_Address>
+        <CANTX_Frame_14_Signal_6_Bitoffset>255</CANTX_Frame_14_Signal_6_Bitoffset>
         <CANTX_Frame_14_Signal_7_StartBit>255</CANTX_Frame_14_Signal_7_StartBit>
         <CANTX_Frame_14_Signal_7_Bits>255</CANTX_Frame_14_Signal_7_Bits>
         <CANTX_Frame_14_Signal_7_Address>65535</CANTX_Frame_14_Signal_7_Address>
@@ -1802,26 +1802,26 @@
         <CANTX_Frame_14_Signal_25_Bits>255</CANTX_Frame_14_Signal_25_Bits>
         <CANTX_Frame_14_Signal_25_Address>65535</CANTX_Frame_14_Signal_25_Address>
         <CANTX_Frame_14_Signal_25_Bitoffset>255</CANTX_Frame_14_Signal_25_Bitoffset>
-        <CANTX_Frame_15_Description>Configured cell limits</CANTX_Frame_15_Description>
-        <CANTX_Frame_15_ID>2147485285</CANTX_Frame_15_ID>
-        <CANTX_Frame_15_Interval>19</CANTX_Frame_15_Interval>
-        <CANTX_Frame_15_DLC>8</CANTX_Frame_15_DLC>
-        <CANTX_Frame_15_Signal_1_StartBit>128</CANTX_Frame_15_Signal_1_StartBit>
-        <CANTX_Frame_15_Signal_1_Bits>16</CANTX_Frame_15_Signal_1_Bits>
-        <CANTX_Frame_15_Signal_1_Address>2900</CANTX_Frame_15_Signal_1_Address>
-        <CANTX_Frame_15_Signal_1_Bitoffset>0</CANTX_Frame_15_Signal_1_Bitoffset>
-        <CANTX_Frame_15_Signal_2_StartBit>144</CANTX_Frame_15_Signal_2_StartBit>
-        <CANTX_Frame_15_Signal_2_Bits>16</CANTX_Frame_15_Signal_2_Bits>
-        <CANTX_Frame_15_Signal_2_Address>2000</CANTX_Frame_15_Signal_2_Address>
-        <CANTX_Frame_15_Signal_2_Bitoffset>0</CANTX_Frame_15_Signal_2_Bitoffset>
-        <CANTX_Frame_15_Signal_3_StartBit>160</CANTX_Frame_15_Signal_3_StartBit>
-        <CANTX_Frame_15_Signal_3_Bits>16</CANTX_Frame_15_Signal_3_Bits>
-        <CANTX_Frame_15_Signal_3_Address>4300</CANTX_Frame_15_Signal_3_Address>
-        <CANTX_Frame_15_Signal_3_Bitoffset>0</CANTX_Frame_15_Signal_3_Bitoffset>
-        <CANTX_Frame_15_Signal_4_StartBit>176</CANTX_Frame_15_Signal_4_StartBit>
-        <CANTX_Frame_15_Signal_4_Bits>16</CANTX_Frame_15_Signal_4_Bits>
-        <CANTX_Frame_15_Signal_4_Address>4250</CANTX_Frame_15_Signal_4_Address>
-        <CANTX_Frame_15_Signal_4_Bitoffset>0</CANTX_Frame_15_Signal_4_Bitoffset>
+        <CANTX_Frame_15_Description>Description Here</CANTX_Frame_15_Description>
+        <CANTX_Frame_15_ID>0</CANTX_Frame_15_ID>
+        <CANTX_Frame_15_Interval>0</CANTX_Frame_15_Interval>
+        <CANTX_Frame_15_DLC>0</CANTX_Frame_15_DLC>
+        <CANTX_Frame_15_Signal_1_StartBit>255</CANTX_Frame_15_Signal_1_StartBit>
+        <CANTX_Frame_15_Signal_1_Bits>255</CANTX_Frame_15_Signal_1_Bits>
+        <CANTX_Frame_15_Signal_1_Address>65535</CANTX_Frame_15_Signal_1_Address>
+        <CANTX_Frame_15_Signal_1_Bitoffset>255</CANTX_Frame_15_Signal_1_Bitoffset>
+        <CANTX_Frame_15_Signal_2_StartBit>255</CANTX_Frame_15_Signal_2_StartBit>
+        <CANTX_Frame_15_Signal_2_Bits>255</CANTX_Frame_15_Signal_2_Bits>
+        <CANTX_Frame_15_Signal_2_Address>65535</CANTX_Frame_15_Signal_2_Address>
+        <CANTX_Frame_15_Signal_2_Bitoffset>255</CANTX_Frame_15_Signal_2_Bitoffset>
+        <CANTX_Frame_15_Signal_3_StartBit>255</CANTX_Frame_15_Signal_3_StartBit>
+        <CANTX_Frame_15_Signal_3_Bits>255</CANTX_Frame_15_Signal_3_Bits>
+        <CANTX_Frame_15_Signal_3_Address>65535</CANTX_Frame_15_Signal_3_Address>
+        <CANTX_Frame_15_Signal_3_Bitoffset>255</CANTX_Frame_15_Signal_3_Bitoffset>
+        <CANTX_Frame_15_Signal_4_StartBit>255</CANTX_Frame_15_Signal_4_StartBit>
+        <CANTX_Frame_15_Signal_4_Bits>255</CANTX_Frame_15_Signal_4_Bits>
+        <CANTX_Frame_15_Signal_4_Address>65535</CANTX_Frame_15_Signal_4_Address>
+        <CANTX_Frame_15_Signal_4_Bitoffset>255</CANTX_Frame_15_Signal_4_Bitoffset>
         <CANTX_Frame_15_Signal_5_StartBit>255</CANTX_Frame_15_Signal_5_StartBit>
         <CANTX_Frame_15_Signal_5_Bits>255</CANTX_Frame_15_Signal_5_Bits>
         <CANTX_Frame_15_Signal_5_Address>65535</CANTX_Frame_15_Signal_5_Address>
@@ -2436,96 +2436,96 @@
         <Postprocessor_Frame_2_Operator>2</Postprocessor_Frame_2_Operator>
         <Postprocessor_Frame_2_Output>0</Postprocessor_Frame_2_Output>
         <Postprocessor_Frame_2_Bytes>130</Postprocessor_Frame_2_Bytes>
-        <Postprocessor_Frame_3_Operand_1>18418</Postprocessor_Frame_3_Operand_1>
+        <Postprocessor_Frame_3_Operand_1>18400</Postprocessor_Frame_3_Operand_1>
         <Postprocessor_Frame_3_Operand_2>256</Postprocessor_Frame_3_Operand_2>
         <Postprocessor_Frame_3_Operator>3</Postprocessor_Frame_3_Operator>
         <Postprocessor_Frame_3_Output>2</Postprocessor_Frame_3_Output>
-        <Postprocessor_Frame_3_Bytes>2</Postprocessor_Frame_3_Bytes>
-        <Postprocessor_Frame_4_Operand_1>18388</Postprocessor_Frame_4_Operand_1>
-        <Postprocessor_Frame_4_Operand_2>35</Postprocessor_Frame_4_Operand_2>
-        <Postprocessor_Frame_4_Operator>9</Postprocessor_Frame_4_Operator>
-        <Postprocessor_Frame_4_Output>4</Postprocessor_Frame_4_Output>
-        <Postprocessor_Frame_4_Bytes>129</Postprocessor_Frame_4_Bytes>
-        <Postprocessor_Frame_5_Operand_1>18463</Postprocessor_Frame_5_Operand_1>
-        <Postprocessor_Frame_5_Operand_2>128</Postprocessor_Frame_5_Operand_2>
-        <Postprocessor_Frame_5_Operator>3</Postprocessor_Frame_5_Operator>
-        <Postprocessor_Frame_5_Output>5</Postprocessor_Frame_5_Output>
-        <Postprocessor_Frame_5_Bytes>129</Postprocessor_Frame_5_Bytes>
-        <Postprocessor_Frame_6_Operand_1>18465</Postprocessor_Frame_6_Operand_1>
-        <Postprocessor_Frame_6_Operand_2>255</Postprocessor_Frame_6_Operand_2>
-        <Postprocessor_Frame_6_Operator>2</Postprocessor_Frame_6_Operator>
-        <Postprocessor_Frame_6_Output>6</Postprocessor_Frame_6_Output>
-        <Postprocessor_Frame_6_Bytes>129</Postprocessor_Frame_6_Bytes>
-        <Postprocessor_Frame_7_Operand_1>18463</Postprocessor_Frame_7_Operand_1>
-        <Postprocessor_Frame_7_Operand_2>18467</Postprocessor_Frame_7_Operand_2>
-        <Postprocessor_Frame_7_Operator>4</Postprocessor_Frame_7_Operator>
-        <Postprocessor_Frame_7_Output>7</Postprocessor_Frame_7_Output>
-        <Postprocessor_Frame_7_Bytes>129</Postprocessor_Frame_7_Bytes>
-        <Postprocessor_Frame_8_Operand_1>18463</Postprocessor_Frame_8_Operand_1>
-        <Postprocessor_Frame_8_Operand_2>18469</Postprocessor_Frame_8_Operand_2>
-        <Postprocessor_Frame_8_Operator>1</Postprocessor_Frame_8_Operator>
-        <Postprocessor_Frame_8_Output>8</Postprocessor_Frame_8_Output>
-        <Postprocessor_Frame_8_Bytes>129</Postprocessor_Frame_8_Bytes>
-        <Postprocessor_Frame_9_Operand_1>18389</Postprocessor_Frame_9_Operand_1>
-        <Postprocessor_Frame_9_Operand_2>35</Postprocessor_Frame_9_Operand_2>
-        <Postprocessor_Frame_9_Operator>9</Postprocessor_Frame_9_Operator>
-        <Postprocessor_Frame_9_Output>9</Postprocessor_Frame_9_Output>
-        <Postprocessor_Frame_9_Bytes>129</Postprocessor_Frame_9_Bytes>
-        <Postprocessor_Frame_10_Operand_1>18473</Postprocessor_Frame_10_Operand_1>
-        <Postprocessor_Frame_10_Operand_2>128</Postprocessor_Frame_10_Operand_2>
-        <Postprocessor_Frame_10_Operator>3</Postprocessor_Frame_10_Operator>
-        <Postprocessor_Frame_10_Output>10</Postprocessor_Frame_10_Output>
-        <Postprocessor_Frame_10_Bytes>129</Postprocessor_Frame_10_Bytes>
-        <Postprocessor_Frame_11_Operand_1>18475</Postprocessor_Frame_11_Operand_1>
-        <Postprocessor_Frame_11_Operand_2>255</Postprocessor_Frame_11_Operand_2>
-        <Postprocessor_Frame_11_Operator>2</Postprocessor_Frame_11_Operator>
-        <Postprocessor_Frame_11_Output>11</Postprocessor_Frame_11_Output>
-        <Postprocessor_Frame_11_Bytes>129</Postprocessor_Frame_11_Bytes>
-        <Postprocessor_Frame_12_Operand_1>18473</Postprocessor_Frame_12_Operand_1>
-        <Postprocessor_Frame_12_Operand_2>18477</Postprocessor_Frame_12_Operand_2>
-        <Postprocessor_Frame_12_Operator>4</Postprocessor_Frame_12_Operator>
-        <Postprocessor_Frame_12_Output>12</Postprocessor_Frame_12_Output>
-        <Postprocessor_Frame_12_Bytes>129</Postprocessor_Frame_12_Bytes>
-        <Postprocessor_Frame_13_Operand_1>18473</Postprocessor_Frame_13_Operand_1>
-        <Postprocessor_Frame_13_Operand_2>18479</Postprocessor_Frame_13_Operand_2>
-        <Postprocessor_Frame_13_Operator>1</Postprocessor_Frame_13_Operator>
-        <Postprocessor_Frame_13_Output>13</Postprocessor_Frame_13_Output>
-        <Postprocessor_Frame_13_Bytes>129</Postprocessor_Frame_13_Bytes>
-        <Postprocessor_Frame_14_Operand_1>18388</Postprocessor_Frame_14_Operand_1>
-        <Postprocessor_Frame_14_Operand_2>55</Postprocessor_Frame_14_Operand_2>
-        <Postprocessor_Frame_14_Operator>9</Postprocessor_Frame_14_Operator>
-        <Postprocessor_Frame_14_Output>14</Postprocessor_Frame_14_Output>
-        <Postprocessor_Frame_14_Bytes>129</Postprocessor_Frame_14_Bytes>
-        <Postprocessor_Frame_15_Operand_1>18483</Postprocessor_Frame_15_Operand_1>
-        <Postprocessor_Frame_15_Operand_2>128</Postprocessor_Frame_15_Operand_2>
-        <Postprocessor_Frame_15_Operator>3</Postprocessor_Frame_15_Operator>
-        <Postprocessor_Frame_15_Output>15</Postprocessor_Frame_15_Output>
-        <Postprocessor_Frame_15_Bytes>129</Postprocessor_Frame_15_Bytes>
-        <Postprocessor_Frame_16_Operand_1>18485</Postprocessor_Frame_16_Operand_1>
-        <Postprocessor_Frame_16_Operand_2>255</Postprocessor_Frame_16_Operand_2>
-        <Postprocessor_Frame_16_Operator>2</Postprocessor_Frame_16_Operator>
-        <Postprocessor_Frame_16_Output>16</Postprocessor_Frame_16_Output>
-        <Postprocessor_Frame_16_Bytes>129</Postprocessor_Frame_16_Bytes>
-        <Postprocessor_Frame_17_Operand_1>18471</Postprocessor_Frame_17_Operand_1>
-        <Postprocessor_Frame_17_Operand_2>18487</Postprocessor_Frame_17_Operand_2>
-        <Postprocessor_Frame_17_Operator>4</Postprocessor_Frame_17_Operator>
-        <Postprocessor_Frame_17_Output>17</Postprocessor_Frame_17_Output>
-        <Postprocessor_Frame_17_Bytes>129</Postprocessor_Frame_17_Bytes>
-        <Postprocessor_Frame_18_Operand_1>18481</Postprocessor_Frame_18_Operand_1>
-        <Postprocessor_Frame_18_Operand_2>18487</Postprocessor_Frame_18_Operand_2>
-        <Postprocessor_Frame_18_Operator>4</Postprocessor_Frame_18_Operator>
-        <Postprocessor_Frame_18_Output>18</Postprocessor_Frame_18_Output>
-        <Postprocessor_Frame_18_Bytes>129</Postprocessor_Frame_18_Bytes>
-        <Postprocessor_Frame_19_Operand_1>18388</Postprocessor_Frame_19_Operand_1>
-        <Postprocessor_Frame_19_Operand_2>18489</Postprocessor_Frame_19_Operand_2>
-        <Postprocessor_Frame_19_Operator>9</Postprocessor_Frame_19_Operator>
-        <Postprocessor_Frame_19_Output>2</Postprocessor_Frame_19_Output>
-        <Postprocessor_Frame_19_Bytes>129</Postprocessor_Frame_19_Bytes>
-        <Postprocessor_Frame_20_Operand_1>18389</Postprocessor_Frame_20_Operand_1>
-        <Postprocessor_Frame_20_Operand_2>18491</Postprocessor_Frame_20_Operand_2>
-        <Postprocessor_Frame_20_Operator>9</Postprocessor_Frame_20_Operator>
-        <Postprocessor_Frame_20_Output>3</Postprocessor_Frame_20_Output>
-        <Postprocessor_Frame_20_Bytes>129</Postprocessor_Frame_20_Bytes>
+        <Postprocessor_Frame_3_Bytes>4</Postprocessor_Frame_3_Bytes>
+        <Postprocessor_Frame_4_Operand_1>16384</Postprocessor_Frame_4_Operand_1>
+        <Postprocessor_Frame_4_Operand_2>0</Postprocessor_Frame_4_Operand_2>
+        <Postprocessor_Frame_4_Operator>0</Postprocessor_Frame_4_Operator>
+        <Postprocessor_Frame_4_Output>0</Postprocessor_Frame_4_Output>
+        <Postprocessor_Frame_4_Bytes>0</Postprocessor_Frame_4_Bytes>
+        <Postprocessor_Frame_5_Operand_1>0</Postprocessor_Frame_5_Operand_1>
+        <Postprocessor_Frame_5_Operand_2>0</Postprocessor_Frame_5_Operand_2>
+        <Postprocessor_Frame_5_Operator>0</Postprocessor_Frame_5_Operator>
+        <Postprocessor_Frame_5_Output>0</Postprocessor_Frame_5_Output>
+        <Postprocessor_Frame_5_Bytes>0</Postprocessor_Frame_5_Bytes>
+        <Postprocessor_Frame_6_Operand_1>0</Postprocessor_Frame_6_Operand_1>
+        <Postprocessor_Frame_6_Operand_2>0</Postprocessor_Frame_6_Operand_2>
+        <Postprocessor_Frame_6_Operator>0</Postprocessor_Frame_6_Operator>
+        <Postprocessor_Frame_6_Output>0</Postprocessor_Frame_6_Output>
+        <Postprocessor_Frame_6_Bytes>0</Postprocessor_Frame_6_Bytes>
+        <Postprocessor_Frame_7_Operand_1>0</Postprocessor_Frame_7_Operand_1>
+        <Postprocessor_Frame_7_Operand_2>0</Postprocessor_Frame_7_Operand_2>
+        <Postprocessor_Frame_7_Operator>0</Postprocessor_Frame_7_Operator>
+        <Postprocessor_Frame_7_Output>0</Postprocessor_Frame_7_Output>
+        <Postprocessor_Frame_7_Bytes>0</Postprocessor_Frame_7_Bytes>
+        <Postprocessor_Frame_8_Operand_1>0</Postprocessor_Frame_8_Operand_1>
+        <Postprocessor_Frame_8_Operand_2>0</Postprocessor_Frame_8_Operand_2>
+        <Postprocessor_Frame_8_Operator>0</Postprocessor_Frame_8_Operator>
+        <Postprocessor_Frame_8_Output>0</Postprocessor_Frame_8_Output>
+        <Postprocessor_Frame_8_Bytes>0</Postprocessor_Frame_8_Bytes>
+        <Postprocessor_Frame_9_Operand_1>0</Postprocessor_Frame_9_Operand_1>
+        <Postprocessor_Frame_9_Operand_2>0</Postprocessor_Frame_9_Operand_2>
+        <Postprocessor_Frame_9_Operator>0</Postprocessor_Frame_9_Operator>
+        <Postprocessor_Frame_9_Output>0</Postprocessor_Frame_9_Output>
+        <Postprocessor_Frame_9_Bytes>0</Postprocessor_Frame_9_Bytes>
+        <Postprocessor_Frame_10_Operand_1>0</Postprocessor_Frame_10_Operand_1>
+        <Postprocessor_Frame_10_Operand_2>0</Postprocessor_Frame_10_Operand_2>
+        <Postprocessor_Frame_10_Operator>0</Postprocessor_Frame_10_Operator>
+        <Postprocessor_Frame_10_Output>0</Postprocessor_Frame_10_Output>
+        <Postprocessor_Frame_10_Bytes>0</Postprocessor_Frame_10_Bytes>
+        <Postprocessor_Frame_11_Operand_1>0</Postprocessor_Frame_11_Operand_1>
+        <Postprocessor_Frame_11_Operand_2>0</Postprocessor_Frame_11_Operand_2>
+        <Postprocessor_Frame_11_Operator>0</Postprocessor_Frame_11_Operator>
+        <Postprocessor_Frame_11_Output>0</Postprocessor_Frame_11_Output>
+        <Postprocessor_Frame_11_Bytes>0</Postprocessor_Frame_11_Bytes>
+        <Postprocessor_Frame_12_Operand_1>0</Postprocessor_Frame_12_Operand_1>
+        <Postprocessor_Frame_12_Operand_2>0</Postprocessor_Frame_12_Operand_2>
+        <Postprocessor_Frame_12_Operator>0</Postprocessor_Frame_12_Operator>
+        <Postprocessor_Frame_12_Output>0</Postprocessor_Frame_12_Output>
+        <Postprocessor_Frame_12_Bytes>0</Postprocessor_Frame_12_Bytes>
+        <Postprocessor_Frame_13_Operand_1>0</Postprocessor_Frame_13_Operand_1>
+        <Postprocessor_Frame_13_Operand_2>0</Postprocessor_Frame_13_Operand_2>
+        <Postprocessor_Frame_13_Operator>0</Postprocessor_Frame_13_Operator>
+        <Postprocessor_Frame_13_Output>0</Postprocessor_Frame_13_Output>
+        <Postprocessor_Frame_13_Bytes>0</Postprocessor_Frame_13_Bytes>
+        <Postprocessor_Frame_14_Operand_1>0</Postprocessor_Frame_14_Operand_1>
+        <Postprocessor_Frame_14_Operand_2>0</Postprocessor_Frame_14_Operand_2>
+        <Postprocessor_Frame_14_Operator>0</Postprocessor_Frame_14_Operator>
+        <Postprocessor_Frame_14_Output>0</Postprocessor_Frame_14_Output>
+        <Postprocessor_Frame_14_Bytes>0</Postprocessor_Frame_14_Bytes>
+        <Postprocessor_Frame_15_Operand_1>0</Postprocessor_Frame_15_Operand_1>
+        <Postprocessor_Frame_15_Operand_2>0</Postprocessor_Frame_15_Operand_2>
+        <Postprocessor_Frame_15_Operator>0</Postprocessor_Frame_15_Operator>
+        <Postprocessor_Frame_15_Output>0</Postprocessor_Frame_15_Output>
+        <Postprocessor_Frame_15_Bytes>0</Postprocessor_Frame_15_Bytes>
+        <Postprocessor_Frame_16_Operand_1>0</Postprocessor_Frame_16_Operand_1>
+        <Postprocessor_Frame_16_Operand_2>0</Postprocessor_Frame_16_Operand_2>
+        <Postprocessor_Frame_16_Operator>0</Postprocessor_Frame_16_Operator>
+        <Postprocessor_Frame_16_Output>0</Postprocessor_Frame_16_Output>
+        <Postprocessor_Frame_16_Bytes>0</Postprocessor_Frame_16_Bytes>
+        <Postprocessor_Frame_17_Operand_1>0</Postprocessor_Frame_17_Operand_1>
+        <Postprocessor_Frame_17_Operand_2>0</Postprocessor_Frame_17_Operand_2>
+        <Postprocessor_Frame_17_Operator>0</Postprocessor_Frame_17_Operator>
+        <Postprocessor_Frame_17_Output>0</Postprocessor_Frame_17_Output>
+        <Postprocessor_Frame_17_Bytes>0</Postprocessor_Frame_17_Bytes>
+        <Postprocessor_Frame_18_Operand_1>0</Postprocessor_Frame_18_Operand_1>
+        <Postprocessor_Frame_18_Operand_2>0</Postprocessor_Frame_18_Operand_2>
+        <Postprocessor_Frame_18_Operator>0</Postprocessor_Frame_18_Operator>
+        <Postprocessor_Frame_18_Output>0</Postprocessor_Frame_18_Output>
+        <Postprocessor_Frame_18_Bytes>0</Postprocessor_Frame_18_Bytes>
+        <Postprocessor_Frame_19_Operand_1>0</Postprocessor_Frame_19_Operand_1>
+        <Postprocessor_Frame_19_Operand_2>0</Postprocessor_Frame_19_Operand_2>
+        <Postprocessor_Frame_19_Operator>0</Postprocessor_Frame_19_Operator>
+        <Postprocessor_Frame_19_Output>0</Postprocessor_Frame_19_Output>
+        <Postprocessor_Frame_19_Bytes>0</Postprocessor_Frame_19_Bytes>
+        <Postprocessor_Frame_20_Operand_1>0</Postprocessor_Frame_20_Operand_1>
+        <Postprocessor_Frame_20_Operand_2>0</Postprocessor_Frame_20_Operand_2>
+        <Postprocessor_Frame_20_Operator>0</Postprocessor_Frame_20_Operator>
+        <Postprocessor_Frame_20_Output>0</Postprocessor_Frame_20_Output>
+        <Postprocessor_Frame_20_Bytes>0</Postprocessor_Frame_20_Bytes>
         <Postprocessor_Frame_21_Operand_1>0</Postprocessor_Frame_21_Operand_1>
         <Postprocessor_Frame_21_Operand_2>0</Postprocessor_Frame_21_Operand_2>
         <Postprocessor_Frame_21_Operator>0</Postprocessor_Frame_21_Operator>
@@ -2555,7 +2555,7 @@
         <DischargeShapingSOC2>15</DischargeShapingSOC2>
         <DischargeShapingSOC3>25</DischargeShapingSOC3>
         <DischargeShapingSOC4>40</DischargeShapingSOC4>
-        <DischargeShapingSOCCurrent1>500</DischargeShapingSOCCurrent1>
+        <DischargeShapingSOCCurrent1>400</DischargeShapingSOCCurrent1>
         <DischargeShapingSOCCurrent2>1800</DischargeShapingSOCCurrent2>
         <DischargeShapingSOCCurrent3>3000</DischargeShapingSOCCurrent3>
         <RegenShapingSOC1>80</RegenShapingSOC1>
@@ -2568,8 +2568,8 @@
         <RegenShapingTemp2>0</RegenShapingTemp2>
         <RegenShapingTemp3>5</RegenShapingTemp3>
         <RegenShapingTemp4>10</RegenShapingTemp4>
-        <RegenShapingTemp5>45</RegenShapingTemp5>
-        <RegenShapingTemp6>47</RegenShapingTemp6>
+        <RegenShapingTemp5>40</RegenShapingTemp5>
+        <RegenShapingTemp6>45</RegenShapingTemp6>
         <RegenShapingTemp7>50</RegenShapingTemp7>
         <RegenShapingTemp8>55</RegenShapingTemp8>
         <RegenShapingCurrent2>100</RegenShapingCurrent2>
@@ -2592,9 +2592,9 @@
         <ChargeShapingTemp2>-2</ChargeShapingTemp2>
         <ChargeShapingTemp3>2</ChargeShapingTemp3>
         <ChargeShapingTemp4>5</ChargeShapingTemp4>
-        <ChargeShapingTemp5>52</ChargeShapingTemp5>
-        <ChargeShapingTemp6>53</ChargeShapingTemp6>
-        <ChargeShapingTemp7>54</ChargeShapingTemp7>
+        <ChargeShapingTemp5>45</ChargeShapingTemp5>
+        <ChargeShapingTemp6>50</ChargeShapingTemp6>
+        <ChargeShapingTemp7>53</ChargeShapingTemp7>
         <ChargeShapingTemp8>60</ChargeShapingTemp8>
         <ChargeShapingCurrent2>2</ChargeShapingCurrent2>
         <ChargeShapingCurrent3>5</ChargeShapingCurrent3>
@@ -2661,8 +2661,8 @@
         <WarningLevelHighCellTemperature>50</WarningLevelHighCellTemperature>
         <WarningLevelLowCellTemperature>0</WarningLevelLowCellTemperature>
         <DischargeWarningSOCLevel>15</DischargeWarningSOCLevel>
-        <WarningLevelHighCellVoltage>4275</WarningLevelHighCellVoltage>
-        <WarningLevelLowCellVoltage>2700</WarningLevelLowCellVoltage>
+        <WarningLevelHighCellVoltage>4175</WarningLevelHighCellVoltage>
+        <WarningLevelLowCellVoltage>3250</WarningLevelLowCellVoltage>
         <WarningLevelHighCurrentIN>120</WarningLevelHighCurrentIN>
         <WarningLevelHighCurrentOUT>400</WarningLevelHighCurrentOUT>
         <WarninglevelPackResistanceDifference>40</WarninglevelPackResistanceDifference>
@@ -2828,179 +2828,179 @@
         <JCUMode>False</JCUMode>
     </SUBC>
     <LMU>
-        <Cell1Enabled>True</Cell1Enabled>
-        <Cell2Enabled>True</Cell2Enabled>
-        <Cell3Enabled>True</Cell3Enabled>
-        <Cell4Enabled>True</Cell4Enabled>
-        <Cell5Enabled>True</Cell5Enabled>
-        <Cell6Enabled>True</Cell6Enabled>
-        <Cell7Enabled>True</Cell7Enabled>
-        <Cell8Enabled>True</Cell8Enabled>
-        <BleedTempMax>55</BleedTempMax>
-        <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4240</BleedVoltage>
-        <BleedVoltageHyst>200</BleedVoltageHyst>
-        <BattTemp1Enabled>True</BattTemp1Enabled>
-        <BattTemp2Enabled>False</BattTemp2Enabled>
-   </LMU>
-    <LMU>
-        <Cell1Enabled>True</Cell1Enabled>
-        <Cell2Enabled>True</Cell2Enabled>
-        <Cell3Enabled>True</Cell3Enabled>
-        <Cell4Enabled>True</Cell4Enabled>
-        <Cell5Enabled>True</Cell5Enabled>
-        <Cell6Enabled>True</Cell6Enabled>
-        <Cell7Enabled>True</Cell7Enabled>
-        <Cell8Enabled>True</Cell8Enabled>
-        <BleedTempMax>55</BleedTempMax>
-        <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4240</BleedVoltage>
-        <BleedVoltageHyst>200</BleedVoltageHyst>
-        <BattTemp1Enabled>True</BattTemp1Enabled>
-        <BattTemp2Enabled>False</BattTemp2Enabled>
-   </LMU>
-    <LMU>
-        <Cell1Enabled>True</Cell1Enabled>
-        <Cell2Enabled>True</Cell2Enabled>
-        <Cell3Enabled>True</Cell3Enabled>
-        <Cell4Enabled>True</Cell4Enabled>
-        <Cell5Enabled>True</Cell5Enabled>
-        <Cell6Enabled>True</Cell6Enabled>
-        <Cell7Enabled>True</Cell7Enabled>
-        <Cell8Enabled>True</Cell8Enabled>
-        <BleedTempMax>55</BleedTempMax>
-        <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4240</BleedVoltage>
-        <BleedVoltageHyst>200</BleedVoltageHyst>
-        <BattTemp1Enabled>True</BattTemp1Enabled>
-        <BattTemp2Enabled>False</BattTemp2Enabled>
-   </LMU>
-    <LMU>
-        <Cell1Enabled>True</Cell1Enabled>
-        <Cell2Enabled>True</Cell2Enabled>
-        <Cell3Enabled>True</Cell3Enabled>
-        <Cell4Enabled>True</Cell4Enabled>
-        <Cell5Enabled>True</Cell5Enabled>
-        <Cell6Enabled>True</Cell6Enabled>
-        <Cell7Enabled>True</Cell7Enabled>
-        <Cell8Enabled>True</Cell8Enabled>
-        <BleedTempMax>55</BleedTempMax>
-        <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4240</BleedVoltage>
-        <BleedVoltageHyst>200</BleedVoltageHyst>
-        <BattTemp1Enabled>True</BattTemp1Enabled>
-        <BattTemp2Enabled>False</BattTemp2Enabled>
-   </LMU>
-    <LMU>
-        <Cell1Enabled>True</Cell1Enabled>
-        <Cell2Enabled>True</Cell2Enabled>
-        <Cell3Enabled>True</Cell3Enabled>
-        <Cell4Enabled>True</Cell4Enabled>
-        <Cell5Enabled>True</Cell5Enabled>
-        <Cell6Enabled>True</Cell6Enabled>
-        <Cell7Enabled>True</Cell7Enabled>
+        <Cell1Enabled>False</Cell1Enabled>
+        <Cell2Enabled>False</Cell2Enabled>
+        <Cell3Enabled>False</Cell3Enabled>
+        <Cell4Enabled>False</Cell4Enabled>
+        <Cell5Enabled>False</Cell5Enabled>
+        <Cell6Enabled>False</Cell6Enabled>
+        <Cell7Enabled>False</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
-        <BleedTempMax>55</BleedTempMax>
-        <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4240</BleedVoltage>
-        <BleedVoltageHyst>200</BleedVoltageHyst>
-        <BattTemp1Enabled>True</BattTemp1Enabled>
-        <BattTemp2Enabled>False</BattTemp2Enabled>
-   </LMU>
-    <LMU>
-        <Cell1Enabled>True</Cell1Enabled>
-        <Cell2Enabled>True</Cell2Enabled>
-        <Cell3Enabled>True</Cell3Enabled>
-        <Cell4Enabled>True</Cell4Enabled>
-        <Cell5Enabled>True</Cell5Enabled>
-        <Cell6Enabled>True</Cell6Enabled>
-        <Cell7Enabled>True</Cell7Enabled>
-        <Cell8Enabled>False</Cell8Enabled>
-        <BleedTempMax>55</BleedTempMax>
-        <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4240</BleedVoltage>
-        <BleedVoltageHyst>200</BleedVoltageHyst>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
         <BattTemp1Enabled>False</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
    </LMU>
     <LMU>
-        <Cell1Enabled>True</Cell1Enabled>
-        <Cell2Enabled>True</Cell2Enabled>
-        <Cell3Enabled>True</Cell3Enabled>
-        <Cell4Enabled>True</Cell4Enabled>
-        <Cell5Enabled>True</Cell5Enabled>
-        <Cell6Enabled>True</Cell6Enabled>
-        <Cell7Enabled>True</Cell7Enabled>
+        <Cell1Enabled>False</Cell1Enabled>
+        <Cell2Enabled>False</Cell2Enabled>
+        <Cell3Enabled>False</Cell3Enabled>
+        <Cell4Enabled>False</Cell4Enabled>
+        <Cell5Enabled>False</Cell5Enabled>
+        <Cell6Enabled>False</Cell6Enabled>
+        <Cell7Enabled>False</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
-        <BleedTempMax>55</BleedTempMax>
-        <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4240</BleedVoltage>
-        <BleedVoltageHyst>200</BleedVoltageHyst>
-        <BattTemp1Enabled>True</BattTemp1Enabled>
-        <BattTemp2Enabled>False</BattTemp2Enabled>
-   </LMU>
-    <LMU>
-        <Cell1Enabled>True</Cell1Enabled>
-        <Cell2Enabled>True</Cell2Enabled>
-        <Cell3Enabled>True</Cell3Enabled>
-        <Cell4Enabled>True</Cell4Enabled>
-        <Cell5Enabled>True</Cell5Enabled>
-        <Cell6Enabled>True</Cell6Enabled>
-        <Cell7Enabled>True</Cell7Enabled>
-        <Cell8Enabled>False</Cell8Enabled>
-        <BleedTempMax>55</BleedTempMax>
-        <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4240</BleedVoltage>
-        <BleedVoltageHyst>200</BleedVoltageHyst>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
         <BattTemp1Enabled>False</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
    </LMU>
     <LMU>
-        <Cell1Enabled>True</Cell1Enabled>
-        <Cell2Enabled>True</Cell2Enabled>
-        <Cell3Enabled>True</Cell3Enabled>
-        <Cell4Enabled>True</Cell4Enabled>
-        <Cell5Enabled>True</Cell5Enabled>
-        <Cell6Enabled>True</Cell6Enabled>
-        <Cell7Enabled>True</Cell7Enabled>
+        <Cell1Enabled>False</Cell1Enabled>
+        <Cell2Enabled>False</Cell2Enabled>
+        <Cell3Enabled>False</Cell3Enabled>
+        <Cell4Enabled>False</Cell4Enabled>
+        <Cell5Enabled>False</Cell5Enabled>
+        <Cell6Enabled>False</Cell6Enabled>
+        <Cell7Enabled>False</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
-        <BleedTempMax>55</BleedTempMax>
-        <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4240</BleedVoltage>
-        <BleedVoltageHyst>200</BleedVoltageHyst>
-        <BattTemp1Enabled>True</BattTemp1Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
    </LMU>
     <LMU>
-        <Cell1Enabled>True</Cell1Enabled>
-        <Cell2Enabled>True</Cell2Enabled>
-        <Cell3Enabled>True</Cell3Enabled>
-        <Cell4Enabled>True</Cell4Enabled>
-        <Cell5Enabled>True</Cell5Enabled>
-        <Cell6Enabled>True</Cell6Enabled>
-        <Cell7Enabled>True</Cell7Enabled>
+        <Cell1Enabled>False</Cell1Enabled>
+        <Cell2Enabled>False</Cell2Enabled>
+        <Cell3Enabled>False</Cell3Enabled>
+        <Cell4Enabled>False</Cell4Enabled>
+        <Cell5Enabled>False</Cell5Enabled>
+        <Cell6Enabled>False</Cell6Enabled>
+        <Cell7Enabled>False</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
-        <BleedTempMax>55</BleedTempMax>
-        <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4240</BleedVoltage>
-        <BleedVoltageHyst>200</BleedVoltageHyst>
-        <BattTemp1Enabled>True</BattTemp1Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
    </LMU>
     <LMU>
-        <Cell1Enabled>True</Cell1Enabled>
-        <Cell2Enabled>True</Cell2Enabled>
-        <Cell3Enabled>True</Cell3Enabled>
-        <Cell4Enabled>True</Cell4Enabled>
-        <Cell5Enabled>True</Cell5Enabled>
-        <Cell6Enabled>True</Cell6Enabled>
-        <Cell7Enabled>True</Cell7Enabled>
+        <Cell1Enabled>False</Cell1Enabled>
+        <Cell2Enabled>False</Cell2Enabled>
+        <Cell3Enabled>False</Cell3Enabled>
+        <Cell4Enabled>False</Cell4Enabled>
+        <Cell5Enabled>False</Cell5Enabled>
+        <Cell6Enabled>False</Cell6Enabled>
+        <Cell7Enabled>False</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
-        <BleedTempMax>55</BleedTempMax>
-        <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4240</BleedVoltage>
-        <BleedVoltageHyst>200</BleedVoltageHyst>
-        <BattTemp1Enabled>True</BattTemp1Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
+        <BattTemp2Enabled>False</BattTemp2Enabled>
+   </LMU>
+    <LMU>
+        <Cell1Enabled>False</Cell1Enabled>
+        <Cell2Enabled>False</Cell2Enabled>
+        <Cell3Enabled>False</Cell3Enabled>
+        <Cell4Enabled>False</Cell4Enabled>
+        <Cell5Enabled>False</Cell5Enabled>
+        <Cell6Enabled>False</Cell6Enabled>
+        <Cell7Enabled>False</Cell7Enabled>
+        <Cell8Enabled>False</Cell8Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
+        <BattTemp2Enabled>False</BattTemp2Enabled>
+   </LMU>
+    <LMU>
+        <Cell1Enabled>False</Cell1Enabled>
+        <Cell2Enabled>False</Cell2Enabled>
+        <Cell3Enabled>False</Cell3Enabled>
+        <Cell4Enabled>False</Cell4Enabled>
+        <Cell5Enabled>False</Cell5Enabled>
+        <Cell6Enabled>False</Cell6Enabled>
+        <Cell7Enabled>False</Cell7Enabled>
+        <Cell8Enabled>False</Cell8Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
+        <BattTemp2Enabled>False</BattTemp2Enabled>
+   </LMU>
+    <LMU>
+        <Cell1Enabled>False</Cell1Enabled>
+        <Cell2Enabled>False</Cell2Enabled>
+        <Cell3Enabled>False</Cell3Enabled>
+        <Cell4Enabled>False</Cell4Enabled>
+        <Cell5Enabled>False</Cell5Enabled>
+        <Cell6Enabled>False</Cell6Enabled>
+        <Cell7Enabled>False</Cell7Enabled>
+        <Cell8Enabled>False</Cell8Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
+        <BattTemp2Enabled>False</BattTemp2Enabled>
+   </LMU>
+    <LMU>
+        <Cell1Enabled>False</Cell1Enabled>
+        <Cell2Enabled>False</Cell2Enabled>
+        <Cell3Enabled>False</Cell3Enabled>
+        <Cell4Enabled>False</Cell4Enabled>
+        <Cell5Enabled>False</Cell5Enabled>
+        <Cell6Enabled>False</Cell6Enabled>
+        <Cell7Enabled>False</Cell7Enabled>
+        <Cell8Enabled>False</Cell8Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
+        <BattTemp2Enabled>False</BattTemp2Enabled>
+   </LMU>
+    <LMU>
+        <Cell1Enabled>False</Cell1Enabled>
+        <Cell2Enabled>False</Cell2Enabled>
+        <Cell3Enabled>False</Cell3Enabled>
+        <Cell4Enabled>False</Cell4Enabled>
+        <Cell5Enabled>False</Cell5Enabled>
+        <Cell6Enabled>False</Cell6Enabled>
+        <Cell7Enabled>False</Cell7Enabled>
+        <Cell8Enabled>False</Cell8Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
+        <BattTemp2Enabled>False</BattTemp2Enabled>
+   </LMU>
+    <LMU>
+        <Cell1Enabled>False</Cell1Enabled>
+        <Cell2Enabled>False</Cell2Enabled>
+        <Cell3Enabled>False</Cell3Enabled>
+        <Cell4Enabled>False</Cell4Enabled>
+        <Cell5Enabled>False</Cell5Enabled>
+        <Cell6Enabled>False</Cell6Enabled>
+        <Cell7Enabled>False</Cell7Enabled>
+        <Cell8Enabled>False</Cell8Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
    </LMU>
 </BMS>
