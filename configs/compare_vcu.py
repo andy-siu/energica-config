@@ -262,7 +262,9 @@ def build_report(path_a, path_b, label_a, label_b):
         diffs.setdefault(section, []).append((ra["identifier"], name, va, vb))
     n_common = len(common)
 
-    charts = []
+    # Build chart datasets once; render both SVG (HTML) and tables (Markdown)
+    # from the same specs so the two reports never drift.
+    chart_specs = []
 
     # 1) throttle curves — output (0..1000) vs pedal position (11 breakpoints)
     xlabels = [f"{int(i*100/10)}%" for i in range(11)]
@@ -270,10 +272,11 @@ def build_report(path_a, path_b, label_a, label_b):
         ca = curve(rows_a, f"ThrottleCurve{cn}_")
         cb = curve(rows_b, f"ThrottleCurve{cn}_")
         if ca and cb and len(ca) == len(cb) == 11:
-            charts.append(line_chart(
-                f"Throttle Curve {cn} — output vs. throttle position",
-                xlabels,
-                [(label_a, SERIES_A, ca), (label_b, SERIES_B, cb)]))
+            chart_specs.append({
+                "kind": "line", "unit": "",
+                "title": f"Throttle Curve {cn} — output vs. throttle position",
+                "cats": xlabels,
+                "series": [(label_a, SERIES_A, ca), (label_b, SERIES_B, cb)]})
 
     # 2) ride maps — power & torque caps per map slot
     map_cats = ["MAP0", "MAP1", "MAP2", "MAP3"]
@@ -282,21 +285,31 @@ def build_report(path_a, path_b, label_a, label_b):
     trq_a = [value_by_name(rows_a, f"{m}_TORQUE") for m in map_cats]
     trq_b = [value_by_name(rows_b, f"{m}_TORQUE") for m in map_cats]
     if all(v is not None for v in pwr_a + pwr_b):
-        charts.append(grouped_bar("Ride maps — power cap per map",
-                                  map_cats,
-                                  [(label_a, SERIES_A, pwr_a), (label_b, SERIES_B, pwr_b)]))
+        chart_specs.append({
+            "kind": "bar", "unit": "",
+            "title": "Ride maps — power cap per map", "cats": map_cats,
+            "series": [(label_a, SERIES_A, pwr_a), (label_b, SERIES_B, pwr_b)]})
     if all(v is not None for v in trq_a + trq_b):
-        charts.append(grouped_bar("Ride maps — torque cap per map",
-                                  map_cats,
-                                  [(label_a, SERIES_A, trq_a), (label_b, SERIES_B, trq_b)]))
+        chart_specs.append({
+            "kind": "bar", "unit": "",
+            "title": "Ride maps — torque cap per map", "cats": map_cats,
+            "series": [(label_a, SERIES_A, trq_a), (label_b, SERIES_B, trq_b)]})
 
     # 3) regen maps
     regen_a = [value_by_name(rows_a, f"REGEN_MAP{i}_TRQ") for i in range(4)]
     regen_b = [value_by_name(rows_b, f"REGEN_MAP{i}_TRQ") for i in range(4)]
     if all(v is not None for v in regen_a + regen_b):
-        charts.append(grouped_bar("Regen torque per map",
-                                  [f"MAP{i}" for i in range(4)],
-                                  [(label_a, SERIES_A, regen_a), (label_b, SERIES_B, regen_b)]))
+        chart_specs.append({
+            "kind": "bar", "unit": "",
+            "title": "Regen torque per map", "cats": [f"MAP{i}" for i in range(4)],
+            "series": [(label_a, SERIES_A, regen_a), (label_b, SERIES_B, regen_b)]})
+
+    charts = []
+    for spec in chart_specs:
+        if spec["kind"] == "line":
+            charts.append(line_chart(spec["title"], spec["cats"], spec["series"]))
+        else:
+            charts.append(grouped_bar(spec["title"], spec["cats"], spec["series"]))
 
     # 4) headline limits
     limit_names = ["TORQUE_LIMIT", "REGEN_TORQUE_LIMIT", "ACTIVE_CURRENT_LIMIT",
@@ -314,7 +327,9 @@ def build_report(path_a, path_b, label_a, label_b):
 
     html_str = render_html(label_a, label_b, path_a, path_b, meta_a, meta_b,
                            n_common, n_diff, charts, diffs, only_a, only_b)
-    return html_str, diffs, only_a, only_b
+    md_str = render_md(label_a, label_b, path_a, path_b, meta_a, meta_b,
+                       n_common, n_diff, chart_specs, diffs, only_a, only_b)
+    return html_str, md_str, diffs, only_a, only_b
 
 
 def render_html(label_a, label_b, path_a, path_b, meta_a, meta_b,
@@ -352,17 +367,10 @@ def render_html(label_a, label_b, path_a, path_b, meta_a, meta_b,
            '<title>VCU comparison</title>', f'<style>{css}</style></head><body><div class="wrap">']
     out.append('<h1>VCU configuration comparison</h1>')
 
-    def when(meta):
-        import datetime
-        t = meta.get("readAt")
-        if not t:
-            return "?"
-        return datetime.datetime.fromtimestamp(t / 1000, datetime.timezone.utc).strftime("%Y-%m-%d")
-
     out.append(f'<p class="sub"><span class="legend-a">{esc(label_a)}</span> '
-               f'(read {when(meta_a)}, {esc(os.path.dirname(path_a))}) &nbsp;vs&nbsp; '
+               f'(read {read_date(meta_a)}, {esc(os.path.dirname(path_a))}) &nbsp;vs&nbsp; '
                f'<span class="legend-b">{esc(label_b)}</span> '
-               f'(read {when(meta_b)}, {esc(os.path.dirname(path_b))})</p>')
+               f'(read {read_date(meta_b)}, {esc(os.path.dirname(path_b))})</p>')
 
     out.append('<div class="tiles">')
     out.append(f'<div class="tile"><div class="n">{n_common}</div>'
@@ -416,6 +424,95 @@ def render_html(label_a, label_b, path_a, path_b, meta_a, meta_b,
     return "".join(out)
 
 
+def read_date(meta):
+    """UTC read date (YYYY-MM-DD) from a dump's readAt epoch-ms, or '?'."""
+    import datetime
+    t = meta.get("readAt")
+    if not t:
+        return "?"
+    return datetime.datetime.fromtimestamp(
+        t / 1000, datetime.timezone.utc).strftime("%Y-%m-%d")
+
+
+def render_md(label_a, label_b, path_a, path_b, meta_a, meta_b,
+              n_common, n_diff, chart_specs, diffs, only_a, only_b):
+    """GitHub-flavoured Markdown twin of the HTML report.
+
+    GitHub sanitises inline SVG in Markdown, so the hand-built charts can't
+    travel; the underlying chart datasets are rendered as plain tables instead,
+    which read fine in the repo browser.
+    """
+    def cell(v):
+        return "—" if v is None else str(v)
+
+    out = ["# VCU configuration comparison", ""]
+    out.append(f"**{label_a}** (read {read_date(meta_a)}, "
+               f"`{os.path.dirname(path_a)}`) vs "
+               f"**{label_b}** (read {read_date(meta_b)}, "
+               f"`{os.path.dirname(path_b)}`)")
+    out.append("")
+
+    # headline stats
+    out.append("| Metric | Count |")
+    out.append("| --- | ---: |")
+    out.append(f"| Shared parameters compared | {n_common} |")
+    out.append(f"| Shared params that differ | {n_diff} |")
+    out.append(f"| Identical | {n_common - n_diff} |")
+    out.append(f"| Params unique to one table | {len(only_a) + len(only_b)} |")
+    out.append("")
+    out.append("Compared **by parameter name**: the two bikes run different VCU "
+               "table versions, so the same identifier can decode to a different "
+               "parameter on each bike. Only parameters present on both bikes are "
+               "compared below; the rest are listed as table-layout differences.")
+    out.append("")
+
+    # chart datasets as tables (SVG doesn't survive GitHub's sanitiser)
+    if chart_specs:
+        out.append("## Charts")
+        out.append("")
+        for spec in chart_specs:
+            out.append(f"### {spec['title']}")
+            out.append("")
+            labels = [s[0] for s in spec["series"]]
+            out.append("| " + " | ".join([""] + labels) + " |")
+            out.append("| " + " | ".join(["---"] + ["---:"] * len(labels)) + " |")
+            for i, cat in enumerate(spec["cats"]):
+                vals = [cell(s[2][i]) for s in spec["series"]]
+                out.append("| " + " | ".join([str(cat)] + vals) + " |")
+            out.append("")
+
+    # differences by section
+    out.append("## Parameter differences by section")
+    out.append("")
+    if not diffs:
+        out.append("_No differing shared parameters._")
+        out.append("")
+    for section, items in diffs.items():
+        out.append(f"### {section} ({len(items)} differ)")
+        out.append("")
+        out.append(f"| Parameter | ID | {label_a} | {label_b} |")
+        out.append("| --- | ---: | ---: | ---: |")
+        for ident, name, va, vb in items:
+            out.append(f"| {name} | {ident} | {cell(va)} | {cell(vb)} |")
+        out.append("")
+
+    # table-layout differences
+    if only_a or only_b:
+        out.append("## Table-layout differences")
+        out.append("")
+        out.append("Parameters that exist on only one bike's parameter table — "
+                   "not comparable as values.")
+        out.append("")
+        for lbl, names in ((label_a, only_a), (label_b, only_b)):
+            out.append(f"### Only in {lbl} ({len(names)})")
+            out.append("")
+            for nm in names:
+                out.append(f"- {nm}")
+            out.append("")
+
+    return "\n".join(out).rstrip() + "\n"
+
+
 def main():
     ap = argparse.ArgumentParser(description="Compare two Energica vcu.json dumps.")
     ap.add_argument("file_a")
@@ -423,6 +520,8 @@ def main():
     ap.add_argument("-o", "--out", default="vcu_comparison.html")
     ap.add_argument("--csv", help="also write the differences to this CSV "
                                    "(default: alongside --out)")
+    ap.add_argument("--md", help="also write a GitHub-viewable Markdown report "
+                                 "(default: alongside --out)")
     ap.add_argument("--label-a")
     ap.add_argument("--label-b")
     args = ap.parse_args()
@@ -435,11 +534,16 @@ def main():
     label_a = args.label_a or default_label(args.file_a)
     label_b = args.label_b or default_label(args.file_b)
 
-    report, diffs, only_a, only_b = build_report(
+    report, md_report, diffs, only_a, only_b = build_report(
         args.file_a, args.file_b, label_a, label_b)
     with open(args.out, "w") as fh:
         fh.write(report)
     print(f"Wrote {args.out}")
+
+    md_path = args.md or (os.path.splitext(args.out)[0] + ".md")
+    with open(md_path, "w") as fh:
+        fh.write(md_report)
+    print(f"Wrote {md_path}")
 
     csv_path = args.csv or (os.path.splitext(args.out)[0] + ".csv")
     write_csv(csv_path, label_a, label_b, diffs, only_a, only_b)
