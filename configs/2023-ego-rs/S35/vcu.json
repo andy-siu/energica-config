@@ -1296,9 +1296,9 @@
       "signed": false,
       "status": "read",
       "otherBikeValue": 3700,
-      "rawHex": "0E 74",
-      "unsigned": 3700,
-      "value": 3700,
+      "rawHex": "0E 92",
+      "unsigned": 3730,
+      "value": 3730,
       "widthMismatch": false,
       "note": null
     },
