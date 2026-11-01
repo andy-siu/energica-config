@@ -15,8 +15,8 @@
         <MinimumChargeTemperature>-10</MinimumChargeTemperature>
         <MaximumDischargeTemperature>60</MaximumDischargeTemperature>
         <MinimumDischargeTemperature>-30</MinimumDischargeTemperature>
-        <BatteryInitialTotalAh>54</BatteryInitialTotalAh>
-        <BatteryCalculatedTotalAh>54</BatteryCalculatedTotalAh>
+        <BatteryInitialTotalAh>69</BatteryInitialTotalAh>
+        <BatteryCalculatedTotalAh>69</BatteryCalculatedTotalAh>
         <NumberOfLMUs>11</NumberOfLMUs>
         <NumberOfParallellStrings>1</NumberOfParallellStrings>
         <ChargeCompleteWhenBalanced>False</ChargeCompleteWhenBalanced>
