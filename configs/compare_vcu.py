@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Compare two Energica VCU parameter dumps and emit an HTML report.
 
-Reads two ``vcu.json`` files (see CLAUDE.md for the schema), pairs their rows,
-and writes a self-contained HTML report with:
+Reads two VCU dumps — either a decoded ``vcu.json`` (see CLAUDE.md for the
+schema) or an ``id_hex,name,value`` CSV backup (e.g.
+``energica-eva-vcu_backup.csv``), in any combination — pairs their rows, and
+writes a self-contained HTML report with:
 
   * headline stat tiles (rows compared, params that differ),
   * inline-SVG charts for throttle curves, ride maps and regen maps,
@@ -12,8 +14,11 @@ No third-party dependencies — the charts are hand-built SVG so the report open
 in any browser and the repo stays install-free.
 
 Usage:
-    python3 compare_vcu.py A/vcu.json B/vcu.json [-o report.html] \
+    python3 compare_vcu_json.py A/vcu.json B/vcu.json [-o report.html] \
         [--label-a NAME] [--label-b NAME]
+
+Either argument may be a .json dump or a .csv backup; the loader picks the
+parser from the file extension.
 """
 from __future__ import annotations
 
@@ -35,11 +40,68 @@ SURFACE = "#fcfcfb"
 
 
 def load_rows(path):
-    """Return (meta, {identifier: row}) for a vcu.json dump."""
+    """Return (meta, {key: row}) for a VCU dump, picking the parser by extension.
+
+    Handles both a decoded ``vcu.json`` and an ``id_hex,name,value`` CSV backup.
+    Both are normalised to the same row shape (``name``/``value``/``section``/
+    ``identifier``) so the rest of the report — which compares BY PARAMETER NAME
+    (see CLAUDE.md) — treats them identically. CSV backups carry no section,
+    type or readAt metadata, so those fields come back ``None``.
+    """
+    if path.lower().endswith(".csv"):
+        return load_csv_rows(path)
+    return load_json_rows(path)
+
+
+def load_json_rows(path):
     with open(path) as fh:
         data = json.load(fh)
     rows = {r["identifier"]: r for r in data["rows"]}
     meta = {k: data.get(k) for k in ("readAt", "complete", "micros")}
+    return meta, rows
+
+
+def _coerce(value):
+    """Parse a CSV value string to int (or float) so chart arithmetic and
+    value equality line up with the JSON dumps, which store numbers."""
+    s = (value or "").strip()
+    try:
+        return int(s)
+    except ValueError:
+        try:
+            return float(s)
+        except ValueError:
+            return s
+
+
+def load_csv_rows(path):
+    """Parse an ``id_hex,name,value`` VCU backup into the common row shape.
+
+    Keyed by the hex-derived identifier when present (falling back to the name),
+    matching ``load_json_rows``. Note the CSV's ``id_hex`` numbering is not the
+    JSON ``4096 + index`` scheme — but comparison is by name, so keys need only
+    be unique, not aligned across the two dumps.
+    """
+    import csv
+    rows = {}
+    with open(path, newline="") as fh:
+        for r in csv.DictReader(fh):
+            name = (r.get("name") or "").strip()
+            if not name:
+                continue
+            id_hex = (r.get("id_hex") or "").strip()
+            try:
+                ident = int(id_hex, 16)
+            except (ValueError, TypeError):
+                ident = None
+            rows[ident if ident is not None else name] = {
+                "identifier": ident,
+                "name": name,
+                "value": _coerce(r.get("value")),
+                "section": None,
+                "type": None,
+            }
+    meta = {"readAt": None, "complete": None, "micros": None}
     return meta, rows
 
 
@@ -514,9 +576,10 @@ def render_md(label_a, label_b, path_a, path_b, meta_a, meta_b,
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Compare two Energica vcu.json dumps.")
-    ap.add_argument("file_a")
-    ap.add_argument("file_b")
+    ap = argparse.ArgumentParser(
+        description="Compare two Energica VCU dumps (vcu.json or CSV backup).")
+    ap.add_argument("file_a", help="first VCU dump (.json or .csv)")
+    ap.add_argument("file_b", help="second VCU dump (.json or .csv)")
     ap.add_argument("-o", "--out", default="vcu_comparison.html")
     ap.add_argument("--csv", help="also write the differences to this CSV "
                                    "(default: alongside --out)")
