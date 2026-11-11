@@ -2828,13 +2828,77 @@
         <JCUMode>False</JCUMode>
     </SUBC>
     <LMU>
-        <Cell1Enabled>False</Cell1Enabled>
-        <Cell2Enabled>False</Cell2Enabled>
-        <Cell3Enabled>False</Cell3Enabled>
-        <Cell4Enabled>False</Cell4Enabled>
-        <Cell5Enabled>False</Cell5Enabled>
-        <Cell6Enabled>False</Cell6Enabled>
-        <Cell7Enabled>False</Cell7Enabled>
+        <Cell1Enabled>True</Cell1Enabled>
+        <Cell2Enabled>True</Cell2Enabled>
+        <Cell3Enabled>True</Cell3Enabled>
+        <Cell4Enabled>True</Cell4Enabled>
+        <Cell5Enabled>True</Cell5Enabled>
+        <Cell6Enabled>True</Cell6Enabled>
+        <Cell7Enabled>True</Cell7Enabled>
+        <Cell8Enabled>True</Cell8Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
+        <BattTemp2Enabled>False</BattTemp2Enabled>
+   </LMU>
+    <LMU>
+        <Cell1Enabled>True</Cell1Enabled>
+        <Cell2Enabled>True</Cell2Enabled>
+        <Cell3Enabled>True</Cell3Enabled>
+        <Cell4Enabled>True</Cell4Enabled>
+        <Cell5Enabled>True</Cell5Enabled>
+        <Cell6Enabled>True</Cell6Enabled>
+        <Cell7Enabled>True</Cell7Enabled>
+        <Cell8Enabled>True</Cell8Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
+        <BattTemp2Enabled>False</BattTemp2Enabled>
+   </LMU>
+    <LMU>
+        <Cell1Enabled>True</Cell1Enabled>
+        <Cell2Enabled>True</Cell2Enabled>
+        <Cell3Enabled>True</Cell3Enabled>
+        <Cell4Enabled>True</Cell4Enabled>
+        <Cell5Enabled>True</Cell5Enabled>
+        <Cell6Enabled>True</Cell6Enabled>
+        <Cell7Enabled>True</Cell7Enabled>
+        <Cell8Enabled>True</Cell8Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
+        <BattTemp2Enabled>False</BattTemp2Enabled>
+   </LMU>
+    <LMU>
+        <Cell1Enabled>True</Cell1Enabled>
+        <Cell2Enabled>True</Cell2Enabled>
+        <Cell3Enabled>True</Cell3Enabled>
+        <Cell4Enabled>True</Cell4Enabled>
+        <Cell5Enabled>True</Cell5Enabled>
+        <Cell6Enabled>True</Cell6Enabled>
+        <Cell7Enabled>True</Cell7Enabled>
+        <Cell8Enabled>True</Cell8Enabled>
+        <BleedTempMax>0</BleedTempMax>
+        <BleedTempHysteresis>0</BleedTempHysteresis>
+        <BleedVoltage>0</BleedVoltage>
+        <BleedVoltageHyst>0</BleedVoltageHyst>
+        <BattTemp1Enabled>False</BattTemp1Enabled>
+        <BattTemp2Enabled>False</BattTemp2Enabled>
+   </LMU>
+    <LMU>
+        <Cell1Enabled>True</Cell1Enabled>
+        <Cell2Enabled>True</Cell2Enabled>
+        <Cell3Enabled>True</Cell3Enabled>
+        <Cell4Enabled>True</Cell4Enabled>
+        <Cell5Enabled>True</Cell5Enabled>
+        <Cell6Enabled>True</Cell6Enabled>
+        <Cell7Enabled>True</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>0</BleedTempMax>
         <BleedTempHysteresis>0</BleedTempHysteresis>
@@ -2844,13 +2908,13 @@
         <BattTemp2Enabled>False</BattTemp2Enabled>
    </LMU>
     <LMU>
-        <Cell1Enabled>False</Cell1Enabled>
-        <Cell2Enabled>False</Cell2Enabled>
-        <Cell3Enabled>False</Cell3Enabled>
-        <Cell4Enabled>False</Cell4Enabled>
-        <Cell5Enabled>False</Cell5Enabled>
-        <Cell6Enabled>False</Cell6Enabled>
-        <Cell7Enabled>False</Cell7Enabled>
+        <Cell1Enabled>True</Cell1Enabled>
+        <Cell2Enabled>True</Cell2Enabled>
+        <Cell3Enabled>True</Cell3Enabled>
+        <Cell4Enabled>True</Cell4Enabled>
+        <Cell5Enabled>True</Cell5Enabled>
+        <Cell6Enabled>True</Cell6Enabled>
+        <Cell7Enabled>True</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>0</BleedTempMax>
         <BleedTempHysteresis>0</BleedTempHysteresis>
@@ -2860,13 +2924,13 @@
         <BattTemp2Enabled>False</BattTemp2Enabled>
    </LMU>
     <LMU>
-        <Cell1Enabled>False</Cell1Enabled>
-        <Cell2Enabled>False</Cell2Enabled>
-        <Cell3Enabled>False</Cell3Enabled>
-        <Cell4Enabled>False</Cell4Enabled>
-        <Cell5Enabled>False</Cell5Enabled>
-        <Cell6Enabled>False</Cell6Enabled>
-        <Cell7Enabled>False</Cell7Enabled>
+        <Cell1Enabled>True</Cell1Enabled>
+        <Cell2Enabled>True</Cell2Enabled>
+        <Cell3Enabled>True</Cell3Enabled>
+        <Cell4Enabled>True</Cell4Enabled>
+        <Cell5Enabled>True</Cell5Enabled>
+        <Cell6Enabled>True</Cell6Enabled>
+        <Cell7Enabled>True</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>0</BleedTempMax>
         <BleedTempHysteresis>0</BleedTempHysteresis>
@@ -2876,13 +2940,13 @@
         <BattTemp2Enabled>False</BattTemp2Enabled>
    </LMU>
     <LMU>
-        <Cell1Enabled>False</Cell1Enabled>
-        <Cell2Enabled>False</Cell2Enabled>
-        <Cell3Enabled>False</Cell3Enabled>
-        <Cell4Enabled>False</Cell4Enabled>
-        <Cell5Enabled>False</Cell5Enabled>
-        <Cell6Enabled>False</Cell6Enabled>
-        <Cell7Enabled>False</Cell7Enabled>
+        <Cell1Enabled>True</Cell1Enabled>
+        <Cell2Enabled>True</Cell2Enabled>
+        <Cell3Enabled>True</Cell3Enabled>
+        <Cell4Enabled>True</Cell4Enabled>
+        <Cell5Enabled>True</Cell5Enabled>
+        <Cell6Enabled>True</Cell6Enabled>
+        <Cell7Enabled>True</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>0</BleedTempMax>
         <BleedTempHysteresis>0</BleedTempHysteresis>
@@ -2892,13 +2956,13 @@
         <BattTemp2Enabled>False</BattTemp2Enabled>
    </LMU>
     <LMU>
-        <Cell1Enabled>False</Cell1Enabled>
-        <Cell2Enabled>False</Cell2Enabled>
-        <Cell3Enabled>False</Cell3Enabled>
-        <Cell4Enabled>False</Cell4Enabled>
-        <Cell5Enabled>False</Cell5Enabled>
-        <Cell6Enabled>False</Cell6Enabled>
-        <Cell7Enabled>False</Cell7Enabled>
+        <Cell1Enabled>True</Cell1Enabled>
+        <Cell2Enabled>True</Cell2Enabled>
+        <Cell3Enabled>True</Cell3Enabled>
+        <Cell4Enabled>True</Cell4Enabled>
+        <Cell5Enabled>True</Cell5Enabled>
+        <Cell6Enabled>True</Cell6Enabled>
+        <Cell7Enabled>True</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>0</BleedTempMax>
         <BleedTempHysteresis>0</BleedTempHysteresis>
@@ -2908,13 +2972,13 @@
         <BattTemp2Enabled>False</BattTemp2Enabled>
    </LMU>
     <LMU>
-        <Cell1Enabled>False</Cell1Enabled>
-        <Cell2Enabled>False</Cell2Enabled>
-        <Cell3Enabled>False</Cell3Enabled>
-        <Cell4Enabled>False</Cell4Enabled>
-        <Cell5Enabled>False</Cell5Enabled>
-        <Cell6Enabled>False</Cell6Enabled>
-        <Cell7Enabled>False</Cell7Enabled>
+        <Cell1Enabled>True</Cell1Enabled>
+        <Cell2Enabled>True</Cell2Enabled>
+        <Cell3Enabled>True</Cell3Enabled>
+        <Cell4Enabled>True</Cell4Enabled>
+        <Cell5Enabled>True</Cell5Enabled>
+        <Cell6Enabled>True</Cell6Enabled>
+        <Cell7Enabled>True</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>0</BleedTempMax>
         <BleedTempHysteresis>0</BleedTempHysteresis>
@@ -2924,77 +2988,13 @@
         <BattTemp2Enabled>False</BattTemp2Enabled>
    </LMU>
     <LMU>
-        <Cell1Enabled>False</Cell1Enabled>
-        <Cell2Enabled>False</Cell2Enabled>
-        <Cell3Enabled>False</Cell3Enabled>
-        <Cell4Enabled>False</Cell4Enabled>
-        <Cell5Enabled>False</Cell5Enabled>
-        <Cell6Enabled>False</Cell6Enabled>
-        <Cell7Enabled>False</Cell7Enabled>
-        <Cell8Enabled>False</Cell8Enabled>
-        <BleedTempMax>0</BleedTempMax>
-        <BleedTempHysteresis>0</BleedTempHysteresis>
-        <BleedVoltage>0</BleedVoltage>
-        <BleedVoltageHyst>0</BleedVoltageHyst>
-        <BattTemp1Enabled>False</BattTemp1Enabled>
-        <BattTemp2Enabled>False</BattTemp2Enabled>
-   </LMU>
-    <LMU>
-        <Cell1Enabled>False</Cell1Enabled>
-        <Cell2Enabled>False</Cell2Enabled>
-        <Cell3Enabled>False</Cell3Enabled>
-        <Cell4Enabled>False</Cell4Enabled>
-        <Cell5Enabled>False</Cell5Enabled>
-        <Cell6Enabled>False</Cell6Enabled>
-        <Cell7Enabled>False</Cell7Enabled>
-        <Cell8Enabled>False</Cell8Enabled>
-        <BleedTempMax>0</BleedTempMax>
-        <BleedTempHysteresis>0</BleedTempHysteresis>
-        <BleedVoltage>0</BleedVoltage>
-        <BleedVoltageHyst>0</BleedVoltageHyst>
-        <BattTemp1Enabled>False</BattTemp1Enabled>
-        <BattTemp2Enabled>False</BattTemp2Enabled>
-   </LMU>
-    <LMU>
-        <Cell1Enabled>False</Cell1Enabled>
-        <Cell2Enabled>False</Cell2Enabled>
-        <Cell3Enabled>False</Cell3Enabled>
-        <Cell4Enabled>False</Cell4Enabled>
-        <Cell5Enabled>False</Cell5Enabled>
-        <Cell6Enabled>False</Cell6Enabled>
-        <Cell7Enabled>False</Cell7Enabled>
-        <Cell8Enabled>False</Cell8Enabled>
-        <BleedTempMax>0</BleedTempMax>
-        <BleedTempHysteresis>0</BleedTempHysteresis>
-        <BleedVoltage>0</BleedVoltage>
-        <BleedVoltageHyst>0</BleedVoltageHyst>
-        <BattTemp1Enabled>False</BattTemp1Enabled>
-        <BattTemp2Enabled>False</BattTemp2Enabled>
-   </LMU>
-    <LMU>
-        <Cell1Enabled>False</Cell1Enabled>
-        <Cell2Enabled>False</Cell2Enabled>
-        <Cell3Enabled>False</Cell3Enabled>
-        <Cell4Enabled>False</Cell4Enabled>
-        <Cell5Enabled>False</Cell5Enabled>
-        <Cell6Enabled>False</Cell6Enabled>
-        <Cell7Enabled>False</Cell7Enabled>
-        <Cell8Enabled>False</Cell8Enabled>
-        <BleedTempMax>0</BleedTempMax>
-        <BleedTempHysteresis>0</BleedTempHysteresis>
-        <BleedVoltage>0</BleedVoltage>
-        <BleedVoltageHyst>0</BleedVoltageHyst>
-        <BattTemp1Enabled>False</BattTemp1Enabled>
-        <BattTemp2Enabled>False</BattTemp2Enabled>
-   </LMU>
-    <LMU>
-        <Cell1Enabled>False</Cell1Enabled>
-        <Cell2Enabled>False</Cell2Enabled>
-        <Cell3Enabled>False</Cell3Enabled>
-        <Cell4Enabled>False</Cell4Enabled>
-        <Cell5Enabled>False</Cell5Enabled>
-        <Cell6Enabled>False</Cell6Enabled>
-        <Cell7Enabled>False</Cell7Enabled>
+        <Cell1Enabled>True</Cell1Enabled>
+        <Cell2Enabled>True</Cell2Enabled>
+        <Cell3Enabled>True</Cell3Enabled>
+        <Cell4Enabled>True</Cell4Enabled>
+        <Cell5Enabled>True</Cell5Enabled>
+        <Cell6Enabled>True</Cell6Enabled>
+        <Cell7Enabled>True</Cell7Enabled>
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>0</BleedTempMax>
         <BleedTempHysteresis>0</BleedTempHysteresis>
