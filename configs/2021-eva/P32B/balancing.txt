@@ -1,0 +1,29 @@
+Here is the complete summary of all changes across your VCU, BMCU, and LMU configurations so your 81S 21.5 kWh pack can complete a full balance cycle to 4.200 V per cell:
+
+1. VCU Parameter File (table 4119)
+
+
+ID & Parameter	Old Value	New Value	Purpose
+85;BALANCING_WINDOW_AC	20	60	Opens the VCU balancing window at 4.140 V (4200 - 60) to match the BMCU and LMU thresholds.
+100;TARGET_AC	70	40 or 50 (Temporary)	Slows AC charging current (4.0–5.0 A DC side) so passive balancers have time to bleed high cells before cutoff. Restore to 70 once balanced.
+
+(Keep 70;CELL_COUNT at 81, 79;CELL_TARGET_AC at 4200, and 102;CHG_OVERVOLTAGE at 4225.)
+
+2. BMS Main Controller (<BMCU>)
+
+
+XML Tag	Old Value	New Value	Purpose
+<ChargeCompleteWhenBalanced>	False	True	Keeps the charge session active after hitting 4.200 V until all 81 cells equalize.
+<ChargeModeVoltageDiffThreshold>	4	10 or 15	Sets a realistic 10–15 mV cell spread target so passive balancing completes reliably without timing out.
+<TrickleChargeCurrent>	30	10 or 15	Lowers the current taper floor to 1.0–1.5 A so passive bleeders aren't overwhelmed above 4.140 V.
+<ChargerMinimumCurrent>	30	10 or 15	Matches the lower trickle floor so the BMCU doesn't cut off the charger early during CV balancing.
+
+(Keep <ChargeMaximumCurrent> at 10 [10 A], <CellTargetVoltage> at 4200, and leave <SUBC> untouched.)
+
+3. Local Monitoring Units (<LMU> — apply to all 11 blocks)
+
+
+XML Tag	Old Value	New Value	Purpose
+<BleedVoltage>	4200	4140	Allows passive bleed resistors to start equalizing high cells at 4.140 V instead of waiting until 4.200 V, while still charging all cells up to 4.200 V.
+
+(Keep <BleedTempMax> at 55, <BleedVoltageHyst> at 200, and preserve each board's existing Cell1Enabled–Cell8Enabled masks.)
