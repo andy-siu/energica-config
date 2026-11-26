@@ -19,7 +19,7 @@
         <BatteryCalculatedTotalAh>64</BatteryCalculatedTotalAh>
         <NumberOfLMUs>11</NumberOfLMUs>
         <NumberOfParallellStrings>1</NumberOfParallellStrings>
-        <ChargeCompleteWhenBalanced>False</ChargeCompleteWhenBalanced>
+        <ChargeCompleteWhenBalanced>True</ChargeCompleteWhenBalanced>
         <FanOnTemperature>40</FanOnTemperature>
         <HeaterOffTemperature>5</HeaterOffTemperature>
         <UseInternalAnalogSupply>False</UseInternalAnalogSupply>
@@ -51,7 +51,7 @@
         <CoolingMode>Always</CoolingMode>
         <HeatingMode>Always</HeatingMode>
         <DischargeModeVoltageDiffThreshold>15</DischargeModeVoltageDiffThreshold>
-        <ChargeModeVoltageDiffThreshold>4</ChargeModeVoltageDiffThreshold>
+        <ChargeModeVoltageDiffThreshold>15</ChargeModeVoltageDiffThreshold>
         <VoltageScalingFactor>100</VoltageScalingFactor>
         <CellEndOfLifeVoltage>2500</CellEndOfLifeVoltage>
         <MaxLMUtemperature>85</MaxLMUtemperature>
@@ -62,8 +62,8 @@
         <IsoOffsetDischargeMode>40</IsoOffsetDischargeMode>
         <IsoSettlingTime>80</IsoSettlingTime>
         <ChargeMaximumCurrent>10</ChargeMaximumCurrent>
-        <TrickleChargeCurrent>30</TrickleChargeCurrent>
-        <ChargerMinimumCurrent>30</ChargerMinimumCurrent>
+        <TrickleChargeCurrent>10</TrickleChargeCurrent>
+        <ChargerMinimumCurrent>10</ChargerMinimumCurrent>
         <ChargeMaximumCurrentLowPower>60</ChargeMaximumCurrentLowPower>
         <ChargerEfficiency>0</ChargerEfficiency>
         <ChargerRegulationType>Lin</ChargerRegulationType>
@@ -628,8 +628,6 @@
         <CANTX_Frame_3_Signal_17_Bitoffset>255</CANTX_Frame_3_Signal_17_Bitoffset>
         <CANTX_Frame_3_Signal_18_StartBit>127</CANTX_Frame_3_Signal_18_StartBit>
         <CANTX_Frame_3_Signal_18_Bits>255</CANTX_Frame_3_Signal_18_Bits>
-        <CANTX_Frame_3_Signal_18_Address>16383</CANTX_Frame_3_Signal_18_Address>
-        <CANTX_Frame_3_Signal_18_Bitoffset>255</CANTX_Frame_3_Signal_18_Bitoffset>
         <CANTX_Frame_3_Signal_19_StartBit>127</CANTX_Frame_3_Signal_19_StartBit>
         <CANTX_Frame_3_Signal_19_Bits>255</CANTX_Frame_3_Signal_19_Bits>
         <CANTX_Frame_3_Signal_19_Address>16383</CANTX_Frame_3_Signal_19_Address>
@@ -2838,7 +2836,7 @@
         <Cell8Enabled>True</Cell8Enabled>
         <BleedTempMax>55</BleedTempMax>
         <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4200</BleedVoltage>
+        <BleedVoltage>4140</BleedVoltage>
         <BleedVoltageHyst>200</BleedVoltageHyst>
         <BattTemp1Enabled>True</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
@@ -2854,7 +2852,7 @@
         <Cell8Enabled>True</Cell8Enabled>
         <BleedTempMax>55</BleedTempMax>
         <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4200</BleedVoltage>
+        <BleedVoltage>4140</BleedVoltage>
         <BleedVoltageHyst>200</BleedVoltageHyst>
         <BattTemp1Enabled>True</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
@@ -2870,7 +2868,7 @@
         <Cell8Enabled>True</Cell8Enabled>
         <BleedTempMax>55</BleedTempMax>
         <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4200</BleedVoltage>
+        <BleedVoltage>4140</BleedVoltage>
         <BleedVoltageHyst>200</BleedVoltageHyst>
         <BattTemp1Enabled>True</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
@@ -2886,7 +2884,7 @@
         <Cell8Enabled>True</Cell8Enabled>
         <BleedTempMax>55</BleedTempMax>
         <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4200</BleedVoltage>
+        <BleedVoltage>4140</BleedVoltage>
         <BleedVoltageHyst>200</BleedVoltageHyst>
         <BattTemp1Enabled>True</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
@@ -2902,7 +2900,7 @@
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>55</BleedTempMax>
         <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4200</BleedVoltage>
+        <BleedVoltage>4140</BleedVoltage>
         <BleedVoltageHyst>200</BleedVoltageHyst>
         <BattTemp1Enabled>True</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
@@ -2918,7 +2916,7 @@
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>55</BleedTempMax>
         <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4200</BleedVoltage>
+        <BleedVoltage>4140</BleedVoltage>
         <BleedVoltageHyst>200</BleedVoltageHyst>
         <BattTemp1Enabled>False</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
@@ -2934,7 +2932,7 @@
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>55</BleedTempMax>
         <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4200</BleedVoltage>
+        <BleedVoltage>4140</BleedVoltage>
         <BleedVoltageHyst>200</BleedVoltageHyst>
         <BattTemp1Enabled>True</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
@@ -2950,7 +2948,7 @@
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>55</BleedTempMax>
         <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4200</BleedVoltage>
+        <BleedVoltage>4140</BleedVoltage>
         <BleedVoltageHyst>200</BleedVoltageHyst>
         <BattTemp1Enabled>False</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
@@ -2966,7 +2964,7 @@
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>55</BleedTempMax>
         <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4200</BleedVoltage>
+        <BleedVoltage>4140</BleedVoltage>
         <BleedVoltageHyst>200</BleedVoltageHyst>
         <BattTemp1Enabled>True</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
@@ -2982,7 +2980,7 @@
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>55</BleedTempMax>
         <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4200</BleedVoltage>
+        <BleedVoltage>4140</BleedVoltage>
         <BleedVoltageHyst>200</BleedVoltageHyst>
         <BattTemp1Enabled>True</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>
@@ -2998,7 +2996,7 @@
         <Cell8Enabled>False</Cell8Enabled>
         <BleedTempMax>55</BleedTempMax>
         <BleedTempHysteresis>2</BleedTempHysteresis>
-        <BleedVoltage>4200</BleedVoltage>
+        <BleedVoltage>4140</BleedVoltage>
         <BleedVoltageHyst>200</BleedVoltageHyst>
         <BattTemp1Enabled>True</BattTemp1Enabled>
         <BattTemp2Enabled>False</BattTemp2Enabled>

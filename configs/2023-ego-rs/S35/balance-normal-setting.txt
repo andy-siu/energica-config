@@ -1,0 +1,1 @@
+Verify via diagnostics that your cell voltage spread is within 10–15 mV, then change 100;TARGET_AC back to 70 for normal AC charging speed.
